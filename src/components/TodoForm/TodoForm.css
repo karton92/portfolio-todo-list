@@ -1,0 +1,82 @@
+.todo-form {
+  margin-bottom: 6px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #ffffff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.todo-input::-webkit-input-placeholder {
+  color: #e2e2e2;
+  font-size: 1.2rem;
+}
+
+.todo-input:-ms-input-placeholder {
+  color: #e2e2e2;
+  font-size: 1.2rem;
+}
+
+.todo-input::-ms-input-placeholder {
+  color: #e2e2e2;
+  font-size: 1.2rem;
+}
+
+.todo-input::placeholder {
+  color: #e2e2e2;
+  font-size: 1.2rem;
+}
+
+.todo-button {
+  position: relative;
+  -webkit-transform: translate(0, 4px);
+          transform: translate(0, 4px);
+  font-size: 1.2rem;
+  padding: 11px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: -webkit-gradient(linear, left top, right top, from(#2575c0), to(#50a4b9));
+  background: linear-gradient(90deg, #2575c0 0%, #50a4b9 100%);
+  color: #fff;
+  text-transform: capitalize;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.update {
+  font-size: 20px;
+  -webkit-transform: translate(0, 2px);
+          transform: translate(0, 2px);
+  padding: 12px;
+}
+
+.pink {
+  background: -webkit-gradient(linear, left top, right top, from(#d167a0), to(#eeaccf));
+  background: linear-gradient(90deg, #d167a0 0%, #eeaccf 100%);
+}
+
+.todo-button:hover {
+  background: #b98cb7;
+}
+
+.todo-button svg {
+  font-size: 22px;
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  background: -webkit-gradient(linear, left top, right top, from(#149fff), to(#117aff));
+  background: linear-gradient(90deg, #149fff 0%, #117aff 100%);
+  padding: 16px 22px;
+}
+/*# sourceMappingURL=TodoForm.css.map */

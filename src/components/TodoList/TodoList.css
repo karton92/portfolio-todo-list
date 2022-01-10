@@ -1,0 +1,57 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.bgContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 700px;
+  background: #2f7fc0;
+}
+
+.todo-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 520px;
+  min-height: 1000px;
+  text-align: center;
+  margin: 60px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-image: url("../../images/bgBlue.jpg");
+  /* border: 2px solid white; */
+}
+
+h1 {
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+/* Do zrobienia animacja poniżej, animacja się wysypuje przez błędną kolejność renderowania! */
+.fall {
+  -webkit-transform: translateY(8rem) rotateZ(20deg);
+          transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0.3;
+}
+/*# sourceMappingURL=TodoList.css.map */

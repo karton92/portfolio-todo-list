@@ -1,0 +1,60 @@
+.settings-icon {
+  position: static;
+  text-align: right;
+  margin: 10px;
+}
+
+.settings-icon svg {
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.settings-icon svg:hover {
+  color: #b98cb7;
+}
+
+.settings img {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: -3px;
+  background-color: white;
+  height: 25px;
+  margin: 5px;
+}
+
+.settings p {
+  padding-top: 5px;
+  width: 100%;
+}
+
+.settings {
+  position: relative;
+  z-index: -1;
+  top: -50px;
+  left: 360px;
+  width: 160px;
+  height: 125px;
+  margin-bottom: -120px;
+  border-bottom-right-radius: 8px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  color: #fff;
+  text-transform: uppercase;
+  background-image: url("../../images/bgBlue.jpg");
+}
+
+.settings.active {
+  width: 160px;
+  -webkit-transform: translateX(160px);
+          transform: translateX(160px);
+  cursor: pointer;
+  z-index: -1;
+}
+
+.settings.active.index {
+  z-index: 1;
+}
+/*# sourceMappingURL=Settings.css.map */

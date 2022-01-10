@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 
 // COMPONENTS
-import TodoForm from "./TodoForm";
-import Settings from "./Settings";
-import Todo from "./Todo";
-import TodoSort from "./TodoSort";
+import TodoForm from "../TodoForm/TodoForm";
+import Settings from "../TodoSettings/Settings";
+import Todo from "../Todo/Todo";
+import TodoSort from "../TodoSort/TodoSort";
 
 // CONTEXT
-import { AppContext } from "./Context/AppContext";
+import { AppContext } from "../Context/AppContext";
 
 // CSS
 import "./TodoList.css";

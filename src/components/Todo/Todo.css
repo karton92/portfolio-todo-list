@@ -1,0 +1,93 @@
+.todo-row {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  font-size: 1.1rem;
+  background: -webkit-gradient(linear, left top, right top, from(#da884e), to(#e2551e));
+  background: linear-gradient(90deg, #da884e 0%, #e2551e 100%);
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: -webkit-gradient(linear, left top, right top, from(#59b487), to(#49835c));
+  background: linear-gradient(90deg, #59b487 0%, #49835c 100%);
+}
+
+.todo-row:nth-child(4n + 4) {
+  background: -webkit-gradient(linear, left top, right top, from(#be7dbb), to(#b83078));
+  background: linear-gradient(90deg, #be7dbb 0%, #b83078 100%);
+}
+
+.todo-row:nth-child(4n + 5) {
+  background: -webkit-gradient(linear, left top, right top, from(#149fff), to(#1062ce));
+  background: linear-gradient(90deg, #149fff 0%, #1062ce 100%);
+}
+
+.complete {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.complete .complete-icon {
+  color: #0cfa1c;
+  opacity: 1;
+}
+
+.icons {
+  margin-right: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.delete-icon:hover {
+  color: #e70000;
+}
+
+.edit-icon {
+  color: #fff;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.edit-icon:hover {
+  color: #ffee00;
+}
+
+.complete-icon {
+  margin-right: 5px;
+  color: #fff;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.complete-icon:hover {
+  color: #0cfa1c;
+}
+/*# sourceMappingURL=Todo.css.map */

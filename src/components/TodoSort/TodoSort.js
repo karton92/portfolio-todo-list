@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppContext } from "./Context/AppContext";
+import { AppContext } from "../Context/AppContext";
 import "./TodoSort.css";
 
 const TodoSort = ({ setStatus }) => {
@@ -9,9 +9,15 @@ const TodoSort = ({ setStatus }) => {
   // OTHERS
   const sortText = english ? language.sort : "Sortuj: ";
   const options = english
-    ? language.sortOptions.map(({ eng }) => <option value={eng}>{eng}</option>)
+    ? language.sortOptions.map(({ eng }) => (
+        <option key={eng} value={eng}>
+          {eng}
+        </option>
+      ))
     : language.sortOptions.map(({ eng, pol }) => (
-        <option value={eng}>{pol}</option>
+        <option key={eng} value={eng}>
+          {pol}
+        </option>
       ));
 
   const handleStatus = (e) => {
