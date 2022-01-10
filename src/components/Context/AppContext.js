@@ -26,6 +26,7 @@ const AppProvider = ({ children }) => {
       { eng: "oldest", pol: "najstarsze" },
     ],
     settings: ["Language", "Theme"],
+    text: "Jakaś zmiana",
   };
 
   return (
