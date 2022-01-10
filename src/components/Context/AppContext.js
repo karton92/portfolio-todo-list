@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import pinkBG from "./bgPink.jpg";
+import pinkBG from "../../images/bgPink.jpg";
 
 export const AppContext = createContext();
 
