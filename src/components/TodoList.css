@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.bgContainer {
+  display: flex;
+  justify-content: center;
+  min-width: 700px;
+  background: rgb(47, 127, 192);
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  min-height: 1000px;
+  text-align: center;
+  margin: 60px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  transition: 0.3s;
+  background-image: url("../images/bgBlue.jpg");
+  /* border: 2px solid white; */
+}
+h1 {
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+/* Do zrobienia animacja poniżej, animacja się wysypuje przez błędną kolejność renderowania! */
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0.3;
+}

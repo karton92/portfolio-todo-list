@@ -1,0 +1,72 @@
+.todo-form {
+  margin-bottom: 6px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #ffffff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #e2e2e2;
+  font-size: 1.2rem;
+}
+
+.todo-button {
+  position: relative;
+  transform: translate(0, 4px);
+  font-size: 1.2rem;
+  padding: 11px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(37, 117, 192) 0%,
+    rgb(80, 164, 185) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.update {
+  font-size: 20px;
+  transform: translate(0, 2px);
+  padding: 12px;
+}
+
+.pink {
+  background: linear-gradient(
+    90deg,
+    rgb(209, 103, 160) 0%,
+    rgb(238, 172, 207) 100%
+  );
+}
+
+.todo-button:hover {
+  background: rgb(185, 140, 183);
+}
+
+.todo-button svg {
+  font-size: 22px;
+}
+
+.todo-input.edit {
+  border: 2px solid #149fff;
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}

@@ -1,0 +1,86 @@
+.todo-row {
+  transition: 0.5s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  font-size: 1.1rem;
+  background: linear-gradient(
+    90deg,
+    rgb(218, 136, 78) 0%,
+    rgb(226, 85, 30) 100%
+  );
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgb(89, 180, 135) 0%,
+    rgb(73, 131, 92) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 4) {
+  background: linear-gradient(
+    90deg,
+    rgb(190, 125, 187) 0%,
+    rgb(184, 48, 120) 100%
+  );
+}
+
+.todo-row:nth-child(4n + 5) {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgb(16, 98, 206) 100%
+  );
+}
+
+.complete {
+  transition: 0.5s;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.complete .complete-icon {
+  color: rgb(12, 250, 28);
+  opacity: 1;
+}
+
+.icons {
+  margin-right: -15px;
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+  transition: ease 0.3s;
+}
+.delete-icon:hover {
+  color: rgb(231, 0, 0);
+}
+
+.edit-icon {
+  color: #fff;
+  transition: ease 0.3s;
+}
+.edit-icon:hover {
+  color: rgb(255, 238, 0);
+}
+
+.complete-icon {
+  margin-right: 5px;
+  color: #fff;
+  transition: ease 0.3s;
+}
+.complete-icon:hover {
+  color: rgb(12, 250, 28);
+}
