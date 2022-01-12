@@ -7,7 +7,7 @@ import Todo from "../Todo/Todo";
 import TodoSort from "../TodoSort/TodoSort";
 
 // CONTEXT
-import { AppContext } from "../Context/AppContext";
+import { AppContext } from "../../Context/AppContext";
 
 // CSS
 import "./TodoList.css";

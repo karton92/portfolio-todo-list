@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
-import { AppContext } from "../Context/AppContext";
+import { AppContext } from "../../Context/AppContext";
 import "./Settings.css";
 
 //Settings images & icons
-import pol from "../../images/pol.png";
-import uk from "../../images/uk.png";
-import blue from "../../images/blue.png";
-import pink from "../../images/pink.png";
+import pol from "../../../images/pol.png";
+import uk from "../../../images/uk.png";
+import blue from "../../../images/blue.png";
+import pink from "../../../images/pink.png";
 import { RiSettings4Line } from "react-icons/ri";
 
 const Settings = () => {

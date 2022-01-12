@@ -43,7 +43,7 @@
   transition: 0.4s ease;
   color: #fff;
   text-transform: uppercase;
-  background-image: url("../../images/bgBlue.jpg");
+  background-image: url("../../../images/bgBlue.jpg");
 }
 
 .settings.active {
