@@ -1,10 +1,9 @@
 .sort {
   position: relative;
+  left: 80px;
   color: white;
   margin: 10px 0;
-  margin-bottom: 24px;
   text-align: left;
-  left: 80px;
 }
 
 select {
@@ -18,11 +17,11 @@ select {
   top: -1px;
 }
 
-label {
+select label {
   font-size: 20px;
 }
 
-option {
+select option {
   color: black;
 }
 /*# sourceMappingURL=TodoSort.css.map */

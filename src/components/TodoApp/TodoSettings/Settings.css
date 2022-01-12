@@ -1,7 +1,8 @@
 .settings-icon {
-  position: static;
+  display: block;
   text-align: right;
   margin: 10px;
+  z-index: 0;
 }
 
 .settings-icon svg {
@@ -13,21 +14,7 @@
 }
 
 .settings-icon svg:hover {
-  color: #b98cb7;
-}
-
-.settings img {
-  border: 1px solid white;
-  border-radius: 50%;
-  padding: -3px;
-  background-color: white;
-  height: 25px;
-  margin: 5px;
-}
-
-.settings p {
-  padding-top: 5px;
-  width: 100%;
+  color: #c75ac1;
 }
 
 .settings {
@@ -44,6 +31,20 @@
   color: #fff;
   text-transform: uppercase;
   background-image: url("../../../images/bgBlue.jpg");
+}
+
+.settings img {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: -3px;
+  background-color: white;
+  height: 25px;
+  margin: 5px;
+}
+
+.settings p {
+  padding-top: 5px;
+  width: 100%;
 }
 
 .settings.active {

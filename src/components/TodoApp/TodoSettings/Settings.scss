@@ -1,32 +1,20 @@
 .settings-icon {
-  position: static;
+  display: block;
+  // position: static;
   text-align: right;
   margin: 10px;
-}
+  z-index: 0;
 
-.settings-icon svg {
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-  transition: 0.5s;
-}
+  svg {
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.5s;
 
-.settings-icon svg:hover {
-  color: rgb(185, 140, 183);
-}
-
-.settings img {
-  border: 1px solid white;
-  border-radius: 50%;
-  padding: -3px;
-  background-color: white;
-  height: 25px;
-  margin: 5px;
-}
-
-.settings p {
-  padding-top: 5px;
-  width: 100%;
+    &:hover {
+      color: rgb(199, 90, 193);
+    }
+  }
 }
 
 .settings {
@@ -42,6 +30,20 @@
   color: #fff;
   text-transform: uppercase;
   background-image: url("../../../images/bgBlue.jpg");
+
+  img {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: -3px;
+    background-color: white;
+    height: 25px;
+    margin: 5px;
+  }
+
+  p {
+    padding-top: 5px;
+    width: 100%;
+  }
 }
 
 .settings.active {

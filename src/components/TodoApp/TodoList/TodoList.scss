@@ -6,10 +6,11 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
-.bgContainer {
+.container {
   display: flex;
+  height: 100vh;
   justify-content: center;
-  min-width: 700px;
+  align-content: top;
   background: rgb(47, 127, 192);
 }
 
@@ -18,20 +19,21 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 520px;
-  min-height: 1000px;
+  height: 95vh;
   text-align: center;
-  margin: 60px auto;
+  margin: auto auto;
   border-radius: 10px;
   padding-bottom: 32px;
   transition: 0.3s;
   background-image: url("../../../images/bgBlue.jpg");
-  /* border: 2px solid white; */
-}
-h1 {
-  margin-bottom: 32px;
-  color: #fff;
-  font-size: 24px;
-  text-transform: uppercase;
+
+  h1 {
+    margin-bottom: 15px;
+    margin-top: -35px;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
 }
 
 /* Do zrobienia animacja poniżej, animacja się wysypuje przez błędną kolejność renderowania! */
@@ -39,4 +41,31 @@ h1 {
 .fall {
   transform: translateY(8rem) rotateZ(20deg);
   opacity: 0.3;
+}
+
+.todo-container {
+  // Praca nad scrollbarem (dodać osobny container dla wszystkich todo i żeby scrollbar działał tylko na tej czesci)
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    width: 20px;
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(41, 171, 223);
+    outline: 5px solid rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    margin: 30px;
+    padding: 10px;
+    height: 50px;
+  }
 }

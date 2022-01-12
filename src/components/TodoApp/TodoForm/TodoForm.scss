@@ -10,11 +10,16 @@
   width: 320px;
   background: transparent;
   color: #fff;
-}
 
-.todo-input::placeholder {
-  color: #e2e2e2;
-  font-size: 1.2rem;
+  &::placeholder {
+    color: #e2e2e2;
+    font-size: 1.2rem;
+  }
+
+  // SPRAWDZIĆ DO CZEGO TO BYLO
+  .edit {
+    border: 2px solid #149fff;
+  }
 }
 
 .todo-button {
@@ -34,6 +39,25 @@
   color: #fff;
   text-transform: capitalize;
   transition: all 0.3s ease;
+
+  &:hover {
+    background: rgb(185, 140, 183);
+  }
+
+  svg {
+    font-size: 22px;
+  }
+
+  // SPRAWDZIĆ DO CZEGO TO BYLO
+  .edit {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%
+    );
+    padding: 16px 22px;
+    color: red;
+  }
 }
 
 .update {
@@ -48,25 +72,4 @@
     rgb(209, 103, 160) 0%,
     rgb(238, 172, 207) 100%
   );
-}
-
-.todo-button:hover {
-  background: rgb(185, 140, 183);
-}
-
-.todo-button svg {
-  font-size: 22px;
-}
-
-.todo-input.edit {
-  border: 2px solid #149fff;
-}
-
-.todo-button.edit {
-  background: linear-gradient(
-    90deg,
-    rgba(20, 159, 255, 1) 0%,
-    rgba(17, 122, 255, 1) 100%
-  );
-  padding: 16px 22px;
 }

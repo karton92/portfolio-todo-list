@@ -5,6 +5,7 @@ import TodoForm from "../TodoForm/TodoForm";
 import Settings from "../TodoSettings/Settings";
 import Todo from "../Todo/Todo";
 import TodoSort from "../TodoSort/TodoSort";
+import WeatherApp from "../../WeatherApp/WeatherApp";
 
 // CONTEXT
 import { AppContext } from "../../Context/AppContext";
@@ -108,18 +109,21 @@ const TodoList = () => {
 
   return (
     <>
-      <div className="bgContainer" style={bgStyle}>
+      <div className="container" style={bgStyle}>
         <div className="todo-app" style={imgStyle}>
           <Settings />
           <h1>{titleText}</h1>
+          <WeatherApp />
           <TodoForm onSubmit={addTodo} />
           <TodoSort todos={todos} setStatus={setStatus} />
-          <Todo
-            filteredTodos={filteredTodos}
-            completeTodo={completeTodo}
-            removeTodo={removeTodo}
-            editTodo={editTodo}
-          />
+          <div className="todo-container">
+            <Todo
+              filteredTodos={filteredTodos}
+              completeTodo={completeTodo}
+              removeTodo={removeTodo}
+              editTodo={editTodo}
+            />
+          </div>
         </div>
       </div>
     </>

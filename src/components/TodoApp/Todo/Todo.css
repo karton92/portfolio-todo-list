@@ -15,22 +15,22 @@
   font-size: 1.1rem;
   background: -webkit-gradient(linear, left top, right top, from(#da884e), to(#e2551e));
   background: linear-gradient(90deg, #da884e 0%, #e2551e 100%);
-  padding: 16px;
+  padding: 13px;
   border-radius: 5px;
   width: 90%;
 }
 
-.todo-row:nth-child(4n + 3) {
+.todo-row:nth-child(4n + 2) {
   background: -webkit-gradient(linear, left top, right top, from(#59b487), to(#49835c));
   background: linear-gradient(90deg, #59b487 0%, #49835c 100%);
 }
 
-.todo-row:nth-child(4n + 4) {
+.todo-row:nth-child(4n + 3) {
   background: -webkit-gradient(linear, left top, right top, from(#be7dbb), to(#b83078));
   background: linear-gradient(90deg, #be7dbb 0%, #b83078 100%);
 }
 
-.todo-row:nth-child(4n + 5) {
+.todo-row:nth-child(4n + 4) {
   background: -webkit-gradient(linear, left top, right top, from(#149fff), to(#1062ce));
   background: linear-gradient(90deg, #149fff 0%, #1062ce 100%);
 }
@@ -40,11 +40,6 @@
   transition: 0.5s;
   text-decoration: line-through;
   opacity: 0.4;
-}
-
-.complete .complete-icon {
-  color: #0cfa1c;
-  opacity: 1;
 }
 
 .icons {
@@ -59,35 +54,40 @@
   cursor: pointer;
 }
 
-.delete-icon {
+.icons .delete-icon {
   margin-right: 5px;
   color: #fff;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
 }
 
-.delete-icon:hover {
+.icons .delete-icon:hover {
   color: #e70000;
 }
 
-.edit-icon {
+.icons .edit-icon {
   color: #fff;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
 }
 
-.edit-icon:hover {
-  color: #ffee00;
+.icons .edit-icon:hover {
+  color: #ffe139;
 }
 
-.complete-icon {
+.icons .complete-icon {
   margin-right: 5px;
   color: #fff;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
 }
 
-.complete-icon:hover {
+.icons .complete-icon:hover {
   color: #0cfa1c;
+}
+
+.icons .complete .complete-icon {
+  color: #0cfa1c;
+  opacity: 1;
 }
 /*# sourceMappingURL=Todo.css.map */

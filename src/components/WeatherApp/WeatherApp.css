@@ -1,0 +1,13 @@
+.weatherBox {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 10px;
+  width: 500px;
+  min-height: 150px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  text-align: center;
+}
+/*# sourceMappingURL=WeatherApp.css.map */
