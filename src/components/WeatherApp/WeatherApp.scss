@@ -1,10 +1,16 @@
-.weatherBox {
-  align-self: center;
-  margin-bottom: 10px;
-  width: 500px;
-  min-height: 150px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: white;
-  text-align: center;
+@import "utils";
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  border-radius: $mainBorderRadius;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $mainTextColor;
+  width: 90%;
+  max-width: 500px;
+  min-height: 140px;
 }

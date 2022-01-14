@@ -1,0 +1,46 @@
+@import "../utils";
+
+.weather-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #ffffff;
+  outline: none;
+  width: 250px;
+  background: transparent;
+  color: #fff;
+
+  &::placeholder {
+    color: #e2e2e2;
+    font-size: 1.2rem;
+  }
+
+  // SPRAWDZIĆ DO CZEGO TO BYLO
+  .edit {
+    border: 2px solid #149fff;
+  }
+}
+
+.weather-button {
+  position: relative;
+  transform: translate(0, 4px);
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: auto 10px;
+  border: none;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(37, 117, 192) 0%,
+    rgb(80, 164, 185) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgb(185, 140, 183);
+  }
+}

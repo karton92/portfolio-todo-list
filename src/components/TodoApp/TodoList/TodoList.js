@@ -109,14 +109,16 @@ const TodoList = () => {
 
   return (
     <>
-      <div className="container" style={bgStyle}>
+      <div className="containerTodo" style={bgStyle}>
         <div className="todo-app" style={imgStyle}>
           <Settings />
           <h1>{titleText}</h1>
           <WeatherApp />
           <TodoForm onSubmit={addTodo} />
           <TodoSort todos={todos} setStatus={setStatus} />
-          <div className="todo-container">
+          <div
+            className={`todo-container ${pinkTheme ? "pink-scrollbar" : ""}`}
+          >
             <Todo
               filteredTodos={filteredTodos}
               completeTodo={completeTodo}
