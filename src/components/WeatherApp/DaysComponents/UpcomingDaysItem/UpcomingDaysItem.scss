@@ -1,0 +1,21 @@
+@import "../../Utils/utils";
+
+.weekday {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  padding: 3px;
+  border-radius: $secondaryBorderRadius;
+}
+
+.weekday:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  background: rgba($color: white, $alpha: 0.8);
+  color: #222831;
+
+  -webkit-box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+}

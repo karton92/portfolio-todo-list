@@ -1,0 +1,42 @@
+@import "../../Utils/utils";
+
+.card {
+  border-radius: $mainBorderRadius;
+  // background-color: red;
+  background-image: url("./assets/mountain.jpg");
+  background-size: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.cardInner {
+  z-index: 1;
+  height: auto;
+}
+
+.gradient {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-image: $gradient;
+  background-size: cover;
+  border-radius: $mainBorderRadius;
+  opacity: 0.7;
+}
+
+.img {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-image: url("./assets/mountain.jpg");
+  background-size: cover;
+  border-radius: $mainBorderRadius;
+}
+
+.weekday {
+  width: 100px;
+}

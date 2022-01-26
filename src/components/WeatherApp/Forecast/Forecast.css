@@ -1,17 +1,17 @@
-.box {
+.forecastBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   margin: 10px auto;
   padding: 5px;
   border-radius: 10px;
@@ -23,4 +23,8 @@
   max-width: 500px;
   height: 210px;
 }
-/*# sourceMappingURL=WeatherApp.css.map */
+
+.card {
+  border-radius: 10px;
+}
+/*# sourceMappingURL=Forecast.css.map */

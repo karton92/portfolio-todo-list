@@ -1,0 +1,25 @@
+.weekday {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+  padding: 3px;
+  border-radius: 15px;
+}
+
+.weekday:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.8);
+  color: #222831;
+  -webkit-box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=UpcomingDaysItem.css.map */

@@ -1,0 +1,40 @@
+.card {
+  border-radius: 10px;
+  background-image: url("./assets/mountain.jpg");
+  background-size: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.cardInner {
+  z-index: 1;
+  height: auto;
+}
+
+.gradient {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+  background-size: cover;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+.img {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-image: url("./assets/mountain.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.weekday {
+  width: 100px;
+}
+/*# sourceMappingURL=CurrentDay.css.map */

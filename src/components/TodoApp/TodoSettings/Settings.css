@@ -14,14 +14,17 @@
 }
 
 .settings-icon svg:hover {
-  color: #c75ac1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .settings {
   position: relative;
   z-index: -1;
   top: -50px;
-  left: 360px;
+  left: 401px;
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
   width: 160px;
   height: 125px;
   margin-bottom: -120px;
@@ -32,8 +35,7 @@
   color: #fff;
   text-transform: uppercase;
   background-image: url("../../../images/bgBlue.jpg");
-  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
 }
 
 .settings img {
@@ -43,6 +45,13 @@
   background-color: white;
   height: 25px;
   margin: 5px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.settings img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .settings p {
