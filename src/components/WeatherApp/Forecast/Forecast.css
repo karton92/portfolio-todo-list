@@ -9,11 +9,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin: 10px auto;
-  padding: 5px;
+  margin: 5px auto;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
@@ -24,7 +20,17 @@
   height: 210px;
 }
 
-.card {
+.dayBox {
   border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.descriptionBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=Forecast.css.map */

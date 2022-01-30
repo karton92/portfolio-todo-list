@@ -8,24 +8,22 @@ import UpcomingDaysForecast from "../DaysComponents/UpcomingDays/UpcomingDays";
 
 const Forecast = ({ forecast }) => (
   <div className="forecastBox">
-    <div>
-      <div className="card">
-        <CurrentDay {...forecast.currentDay} />
-      </div>
+    <div className="dayBox">
+      <CurrentDay {...forecast.currentDay} />
     </div>
-    <div>
+    <div className="descriptionBox">
       <CurrentDayDescription forecast={forecast.currentDayDetails} />
       <UpcomingDaysForecast days={forecast.upcomingDays} />
     </div>
   </div>
 );
 
-Forecast.propTypes = {
-  forecast: PropTypes.shape({
-    currentDay: PropTypes.object,
-    currentDayDetails: PropTypes.array,
-    upcomingDays: PropTypes.array,
-  }),
-};
+// Forecast.propTypes = {
+//   forecast: PropTypes.shape({
+//     currentDay: PropTypes.object,
+//     currentDayDetails: PropTypes.array,
+//     upcomingDays: PropTypes.array,
+//   }),
+// };
 
 export default Forecast;

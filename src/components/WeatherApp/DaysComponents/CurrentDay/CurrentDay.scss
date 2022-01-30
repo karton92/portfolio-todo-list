@@ -2,41 +2,36 @@
 
 .card {
   border-radius: $mainBorderRadius;
-  // background-color: red;
-  background-image: url("./assets/mountain.jpg");
-  background-size: auto;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 158, 250, 0.5),
+      rgba(17, 122, 126, 0.5)
+    ),
+    url("./assets/city.jpg");
+  background-size: 100%;
   height: 100%;
   width: 100%;
+  // padding: 5px;
+}
+
+.pinkGradient {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(231, 145, 205, 0.5),
+      rgba(238, 53, 130, 0.5)
+    ),
+    url("./assets/city.jpg");
 }
 
 .cardInner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   z-index: 1;
-  height: auto;
-}
-
-.gradient {
-  position: absolute;
-  width: 60px;
-  height: auto;
-  top: 0;
-  left: 0;
-  background-image: $gradient;
-  background-size: cover;
-  border-radius: $mainBorderRadius;
-  opacity: 0.7;
-}
-
-.img {
-  position: absolute;
-  width: 60px;
-  height: auto;
-  top: 0;
-  left: 0;
-  background-image: url("./assets/mountain.jpg");
-  background-size: cover;
-  border-radius: $mainBorderRadius;
+  height: 100%;
+  padding: 5px;
 }
 
 .weekday {
-  width: 100px;
+  width: 70px;
 }

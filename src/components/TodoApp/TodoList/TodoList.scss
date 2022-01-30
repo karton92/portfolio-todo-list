@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 560px;
+  min-width: 560px;
   height: 95vh;
   max-height: 1000px;
   text-align: center;
@@ -38,7 +38,12 @@
   }
 }
 
-/* Do zrobienia animacja poniżej, animacja się wysypuje przez błędną kolejność renderowania! */
+.form-panel {
+  display: flex;
+  margin: 10px 30px;
+  flex-direction: column;
+  align-items: center;
+}
 
 .fall {
   transform: translateY(8rem) rotateZ(20deg);
@@ -47,7 +52,6 @@
 
 .todo-container {
   height: 40%;
-  // Praca nad scrollbarem (dodać osobny container dla wszystkich todo i żeby scrollbar działał tylko na tej czesci)
   overflow-y: auto;
   overflow-x: hidden;
 

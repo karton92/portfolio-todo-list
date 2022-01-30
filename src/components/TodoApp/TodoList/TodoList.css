@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -31,7 +30,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 560px;
+  min-width: 560px;
   height: 95vh;
   max-height: 1000px;
   text-align: center;
@@ -53,7 +52,20 @@
   text-transform: uppercase;
 }
 
-/* Do zrobienia animacja poniżej, animacja się wysypuje przez błędną kolejność renderowania! */
+.form-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .fall {
   -webkit-transform: translateY(8rem) rotateZ(20deg);
           transform: translateY(8rem) rotateZ(20deg);
