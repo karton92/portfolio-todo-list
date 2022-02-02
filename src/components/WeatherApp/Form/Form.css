@@ -56,4 +56,9 @@
 .weather-button:hover {
   background: #b98cb7;
 }
+
+.pink {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(231, 145, 205, 0.5)), to(rgba(238, 53, 130, 0.5)));
+  background: linear-gradient(to bottom right, rgba(231, 145, 205, 0.5), rgba(238, 53, 130, 0.5));
+}
 /*# sourceMappingURL=Form.css.map */

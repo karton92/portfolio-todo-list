@@ -1,0 +1,38 @@
+.card {
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 158, 250, 0.5)), to(rgba(17, 122, 126, 0.5))), url("./assets/city.jpg");
+  background-image: linear-gradient(to bottom right, rgba(0, 158, 250, 0.5), rgba(17, 122, 126, 0.5)), url("./assets/city.jpg");
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.pinkGradient {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(231, 145, 205, 0.5)), to(rgba(238, 53, 130, 0.5))), url("./assets/city.jpg");
+  background-image: linear-gradient(to bottom right, rgba(231, 145, 205, 0.5), rgba(238, 53, 130, 0.5)), url("./assets/city.jpg");
+}
+
+.cardInner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+  height: 100%;
+  padding: 5px;
+}
+
+.weekday {
+  width: 70px;
+}
+
+h2 {
+  font-size: 20px;
+}
+/*# sourceMappingURL=CurrentDay.css.map */

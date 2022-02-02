@@ -114,8 +114,10 @@ const TodoList = () => {
           <Settings />
           <h1>{titleText}</h1>
           <WeatherApp />
-          <TodoForm onSubmit={addTodo} />
-          <TodoSort todos={todos} setStatus={setStatus} />
+          <div className="form-panel">
+            <TodoForm onSubmit={addTodo} />
+            <TodoSort todos={todos} setStatus={setStatus} />
+          </div>
           <div
             className={`todo-container ${pinkTheme ? "pink-scrollbar" : ""}`}
           >

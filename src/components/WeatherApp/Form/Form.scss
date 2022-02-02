@@ -1,4 +1,4 @@
-@import "../utils";
+@import "../Utils/utils";
 
 .weather-input {
   padding: 14px 32px 14px 16px;
@@ -43,4 +43,12 @@
   &:hover {
     background: rgb(185, 140, 183);
   }
+}
+
+.pink {
+  background: linear-gradient(
+    to bottom right,
+    rgba(231, 145, 205, 0.5),
+    rgba(238, 53, 130, 0.5)
+  );
 }

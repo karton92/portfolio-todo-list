@@ -1,0 +1,16 @@
+.itemBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.itemName {
+  font-weight: 700;
+}
+/*# sourceMappingURL=CurrentDayDescriptionItem.css.map */

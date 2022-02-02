@@ -8,6 +8,7 @@ const TodoSort = ({ setStatus }) => {
 
   // OTHERS
   const sortText = english ? language.sort : "Sortuj: ";
+
   const options = english
     ? language.sortOptions.map(({ eng }) => (
         <option key={eng} value={eng}>

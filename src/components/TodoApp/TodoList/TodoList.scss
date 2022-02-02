@@ -5,11 +5,15 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+// body {
+//   background: rgb(47, 127, 192);
+// }
 
 .containerTodo {
   display: flex;
   height: 100vh;
   justify-content: center;
+  align-content: flex-start;
   align-content: top;
   background: rgb(47, 127, 192);
 }
@@ -17,17 +21,22 @@
 .todo-app {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  width: 520px;
+  justify-content: end;
+  // align-items: center;
+  min-width: 560px;
   height: 95vh;
   max-height: 1000px;
   text-align: center;
   margin: auto auto;
   border-radius: 10px;
-  padding-bottom: 32px;
   transition: 0.3s;
   background-image: url("../../../images/bgBlue.jpg");
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 600px) {
+    min-width: 320px;
+    margin: 10px;
+  }
 
   h1 {
     margin-bottom: 15px;
@@ -35,10 +44,18 @@
     color: #fff;
     font-size: 24px;
     text-transform: uppercase;
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
   }
 }
 
-/* Do zrobienia animacja poniżej, animacja się wysypuje przez błędną kolejność renderowania! */
+.form-panel {
+  display: flex;
+  margin: 10px 30px;
+  flex-direction: column;
+  align-items: center;
+}
 
 .fall {
   transform: translateY(8rem) rotateZ(20deg);
@@ -46,7 +63,7 @@
 }
 
 .todo-container {
-  // Praca nad scrollbarem (dodać osobny container dla wszystkich todo i żeby scrollbar działał tylko na tej czesci)
+  height: 40%;
   overflow-y: auto;
   overflow-x: hidden;
 

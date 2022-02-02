@@ -1,0 +1,12 @@
+@import "../../Utils/utils";
+
+.weekList {
+  display: flex;
+  list-style-type: none;
+  margin: 5px;
+  background: rgba($color: white, $alpha: 0.25);
+  -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+  border-radius: $secondaryBorderRadius;
+  cursor: pointer;
+}

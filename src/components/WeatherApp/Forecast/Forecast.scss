@@ -1,0 +1,28 @@
+@import "../Utils/utils";
+
+.forecastBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // align-items: stretch;
+  margin: 5px auto;
+  // padding: 5px;
+  border-radius: $mainBorderRadius;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: $mainTextColor;
+  width: 90%;
+  max-width: 500px;
+  height: 210px;
+}
+
+.dayBox {
+  border-radius: $mainBorderRadius;
+  height: 100%;
+  width: 100%;
+}
+
+.descriptionBox {
+  display: flex;
+  flex-wrap: wrap;
+}
