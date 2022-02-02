@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/portfolio-todo-list/static/css/main.ac40c222.chunk.css",
+    "main.js": "/portfolio-todo-list/static/js/main.034d029f.chunk.js",
+    "main.js.map": "/portfolio-todo-list/static/js/main.034d029f.chunk.js.map",
+    "runtime-main.js": "/portfolio-todo-list/static/js/runtime-main.c3cba364.js",
+    "runtime-main.js.map": "/portfolio-todo-list/static/js/runtime-main.c3cba364.js.map",
+    "static/js/2.1f2849ad.chunk.js": "/portfolio-todo-list/static/js/2.1f2849ad.chunk.js",
+    "static/js/2.1f2849ad.chunk.js.map": "/portfolio-todo-list/static/js/2.1f2849ad.chunk.js.map",
+    "index.html": "/portfolio-todo-list/index.html",
+    "static/css/main.ac40c222.chunk.css.map": "/portfolio-todo-list/static/css/main.ac40c222.chunk.css.map",
+    "static/js/2.1f2849ad.chunk.js.LICENSE.txt": "/portfolio-todo-list/static/js/2.1f2849ad.chunk.js.LICENSE.txt",
+    "static/media/TodoList.css": "/portfolio-todo-list/static/media/bgBlue.87339415.jpg",
+    "static/media/bgPink.a958e56a.jpg": "/portfolio-todo-list/static/media/bgPink.a958e56a.jpg",
+    "static/media/CurrentDay.css": "/portfolio-todo-list/static/media/city.8dd29a86.jpg",
+    "static/media/uk.3100fbd7.png": "/portfolio-todo-list/static/media/uk.3100fbd7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3cba364.js",
+    "static/js/2.1f2849ad.chunk.js",
+    "static/css/main.ac40c222.chunk.css",
+    "static/js/main.034d029f.chunk.js"
+  ]
+}
