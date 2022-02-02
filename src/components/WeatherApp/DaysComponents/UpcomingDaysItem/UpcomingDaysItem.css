@@ -20,4 +20,20 @@
   background: rgba(255, 255, 255, 0.8);
   color: #222831;
 }
+
+@media (max-width: 600px) {
+  .weekday:hover {
+    width: 20px;
+  }
+}
+
+.weekday img {
+  width: 30px;
+}
+
+@media (max-width: 600px) {
+  .weekday img {
+    width: 20px;
+  }
+}
 /*# sourceMappingURL=UpcomingDaysItem.css.map */

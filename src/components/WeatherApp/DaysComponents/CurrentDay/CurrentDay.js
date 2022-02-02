@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
 import { AppContext } from "../../../Context/AppContext";
 
 import locationIcon from "./assets/location-pin.png";
@@ -74,15 +73,6 @@ const CurrentDay = ({
       </div>
     </div>
   );
-};
-
-CurrentDay.propTypes = {
-  weekday: PropTypes.string.isRequired,
-  date: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  weatherIcon: PropTypes.string.isRequired,
-  temperature: PropTypes.number.isRequired,
-  weatherDescription: PropTypes.string.isRequired,
 };
 
 export default CurrentDay;

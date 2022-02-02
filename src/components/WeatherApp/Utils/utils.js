@@ -93,4 +93,5 @@ export const getUpcomingDaysForecast = (data) =>
     temperature: Math.round(day.max_temp),
     weekdayPL: getWeekdayPL(day.applicable_date),
     weekdayENG: getWeekdayENG(day.applicable_date),
+    id: day.id,
   }));

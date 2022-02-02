@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./Forecast.css";
 
 import CurrentDay from "../DaysComponents/CurrentDay/CurrentDay";
@@ -17,13 +16,5 @@ const Forecast = ({ forecast }) => (
     </div>
   </div>
 );
-
-// Forecast.propTypes = {
-//   forecast: PropTypes.shape({
-//     currentDay: PropTypes.object,
-//     currentDayDetails: PropTypes.array,
-//     upcomingDays: PropTypes.array,
-//   }),
-// };
 
 export default Forecast;

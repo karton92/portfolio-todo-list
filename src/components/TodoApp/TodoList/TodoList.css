@@ -14,6 +14,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   -ms-flex-line-pack: top;
       align-content: top;
   background: #2f7fc0;
@@ -27,21 +29,27 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   min-width: 560px;
   height: 95vh;
   max-height: 1000px;
   text-align: center;
   margin: auto auto;
   border-radius: 10px;
-  padding-bottom: 32px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background-image: url("../../../images/bgBlue.jpg");
   -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  .todo-app {
+    min-width: 320px;
+    margin: 10px;
+  }
 }
 
 .todo-app h1 {
@@ -50,6 +58,12 @@
   color: #fff;
   font-size: 24px;
   text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .todo-app h1 {
+    font-size: 16px;
+  }
 }
 
 .form-panel {

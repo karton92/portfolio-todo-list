@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import PropTypes from "prop-types";
 import { AppContext } from "../../Context/AppContext";
 
 import "./Form.css";
@@ -38,10 +37,6 @@ const Form = ({ submitHandler }) => {
       </button>
     </form>
   );
-};
-
-Form.propTypes = {
-  submitHandler: PropTypes.func.isRequired,
 };
 
 export default Form;

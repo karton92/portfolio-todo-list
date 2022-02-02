@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../../Context/AppContext";
-import PropTypes from "prop-types";
 import "./CurrentDayDescriptionItem.css";
 
-const CurrentDayDescriptionItem = ({ name, value, unit }) => {
+const CurrentDayDescriptionItem = ({ name, value, unit, id }) => {
   const { english } = useContext(AppContext);
 
   return (
@@ -14,12 +13,6 @@ const CurrentDayDescriptionItem = ({ name, value, unit }) => {
       </p>
     </div>
   );
-};
-
-CurrentDayDescriptionItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired,
-  unit: PropTypes.string.isRequired,
 };
 
 export default CurrentDayDescriptionItem;

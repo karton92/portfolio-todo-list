@@ -4,7 +4,6 @@ import Form from "./Form/Form";
 import Loader from "./Loader/Loader";
 import Error from "./Error/Error";
 import Forecast from "./Forecast/Forecast";
-
 import useForecast from "./hooks/useForecast";
 
 const WeatherApp = () => {
