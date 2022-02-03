@@ -7,11 +7,15 @@
 }
 
 .containerTodo {
-  height: auto;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgb(47, 127, 192);
+  @media (max-width: 600px) {
+    padding: 5px;
+    align-items: flex-start;
+  }
 }
 
 .todo-app {
@@ -22,7 +26,6 @@
   height: 95vh;
   max-height: 1000px;
   text-align: center;
-  // margin: auto auto;
   border-radius: 10px;
   transition: 0.3s;
   background-image: url("../../../images/bgBlue.jpg");
