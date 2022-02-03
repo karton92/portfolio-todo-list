@@ -7,11 +7,10 @@
 }
 
 .containerTodo {
+  height: auto;
   display: flex;
-  height: 100vh;
+  align-items: center;
   justify-content: center;
-  align-content: flex-start;
-  align-content: top;
   background: rgb(47, 127, 192);
 }
 
@@ -19,12 +18,11 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  // align-items: center;
   min-width: 560px;
   height: 95vh;
   max-height: 1000px;
   text-align: center;
-  margin: auto auto;
+  // margin: auto auto;
   border-radius: 10px;
   transition: 0.3s;
   background-image: url("../../../images/bgBlue.jpg");

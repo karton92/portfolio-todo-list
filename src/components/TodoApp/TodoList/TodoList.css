@@ -7,17 +7,16 @@
 }
 
 .containerTodo {
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -ms-flex-line-pack: top;
-      align-content: top;
   background: #2f7fc0;
 }
 
@@ -36,7 +35,6 @@
   height: 95vh;
   max-height: 1000px;
   text-align: center;
-  margin: auto auto;
   border-radius: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
