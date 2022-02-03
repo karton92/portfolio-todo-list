@@ -7,12 +7,7 @@
           justify-content: center;
   -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 600px) {
-  .todo-form {
-    width: 90%;
-  }
+  width: 80%;
 }
 
 .todo-input {
@@ -66,10 +61,6 @@
   }
 }
 
-.todo-input .edit {
-  border: 2px solid #149fff;
-}
-
 .todo-button {
   position: relative;
   font-size: 1.2rem;
@@ -92,13 +83,6 @@
 
 .todo-button svg {
   font-size: 22px;
-}
-
-.todo-button .edit {
-  background: -webkit-gradient(linear, left top, right top, from(#149fff), to(#117aff));
-  background: linear-gradient(90deg, #149fff 0%, #117aff 100%);
-  padding: 16px 22px;
-  color: red;
 }
 
 .update {

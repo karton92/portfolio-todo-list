@@ -5,9 +5,6 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-// body {
-//   background: rgb(47, 127, 192);
-// }
 
 .containerTodo {
   display: flex;
@@ -21,7 +18,7 @@
 .todo-app {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: start;
   // align-items: center;
   min-width: 560px;
   height: 95vh;
