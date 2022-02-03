@@ -2,7 +2,10 @@
   display: flex;
   justify-content: center;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-  width: 80%;
+  width: 70%;
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 }
 
 .todo-input {

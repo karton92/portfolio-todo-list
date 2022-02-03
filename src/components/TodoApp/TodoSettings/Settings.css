@@ -31,8 +31,7 @@
   top: 10px;
   left: 100%;
   width: 0;
-  height: 180px;
-  overflow: hidden;
+  height: 185px;
   -webkit-transform: scale(0);
           transform: scale(0);
   margin-bottom: -160px;
@@ -102,7 +101,7 @@
 @media (max-width: 600px) {
   .settings img {
     height: 25px;
-    margin: 3px;
+    margin: 5px;
   }
 }
 
@@ -110,13 +109,13 @@
   width: 40px;
   height: 40px;
   font-size: 30px;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50%;
-  padding: 5px;
+  margin: 6px;
   cursor: pointer;
   outline: none;
-  background: -webkit-gradient(linear, left top, right top, from(#2575c0), to(#50a4b9));
-  background: linear-gradient(90deg, #2575c0 0%, #50a4b9 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#bd0101), to(#f32e2e));
+  background: linear-gradient(90deg, #bd0101 0%, #f32e2e 100%);
   color: #fff;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease;
@@ -124,7 +123,14 @@
 }
 
 .settings button:hover {
-  background: #b98cb7;
+  background: #4dce1a;
+}
+
+.settings button svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
 }
 
 .settings.active {

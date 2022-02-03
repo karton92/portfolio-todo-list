@@ -28,7 +28,7 @@ const TodoList = () => {
     pinkTheme
       ? (document.body.style.backgroundColor = "rgb(209, 103, 160)")
       : (document.body.style.backgroundColor = "rgb(47, 127, 192)");
-  }, []);
+  }, [pinkTheme]);
 
   // /^\s*$/ is regex for empty string or string with only spaces
 
