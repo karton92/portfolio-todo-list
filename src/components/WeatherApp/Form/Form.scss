@@ -43,6 +43,10 @@
   &:hover {
     background: rgb(185, 140, 183);
   }
+
+  @media (max-width: 600px) {
+    margin: 10px;
+  }
 }
 
 .pink {

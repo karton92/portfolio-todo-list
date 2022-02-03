@@ -21,12 +21,6 @@
   color: #222831;
 }
 
-@media (max-width: 600px) {
-  .weekday:hover {
-    width: 20px;
-  }
-}
-
 .weekday img {
   width: 30px;
 }

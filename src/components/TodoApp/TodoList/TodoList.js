@@ -103,7 +103,7 @@ const TodoList = () => {
   };
 
   // OTHERS
-  const titleText = english ? language.title : "Jakie plany na dziś Wariacie?";
+  const titleText = english ? language.title : "Jakie plany na dziś?";
   const bgStyle = pinkTheme ? { background: theme.bgColor } : null;
   const imgStyle = pinkTheme ? { backgroundImage: theme.bgImg } : null;
 
@@ -111,8 +111,10 @@ const TodoList = () => {
     <>
       <div className="containerTodo" style={bgStyle}>
         <div className="todo-app" style={imgStyle}>
-          <Settings />
-          <h1>{titleText}</h1>
+          <div className="settings-panel">
+            <Settings />
+            <h1>{titleText}</h1>
+          </div>
           <WeatherApp />
           <div className="form-panel">
             <TodoForm onSubmit={addTodo} />

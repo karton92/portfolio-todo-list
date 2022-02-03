@@ -13,9 +13,6 @@
     transform: scale(1.1);
     background: rgba($color: white, $alpha: 0.8);
     color: #222831;
-    @media (max-width: 600px) {
-      width: 20px;
-    }
   }
 
   img {

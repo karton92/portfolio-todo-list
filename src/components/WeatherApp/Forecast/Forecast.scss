@@ -14,6 +14,10 @@
   width: 90%;
   max-width: 500px;
   height: 210px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
 .dayBox {
@@ -25,4 +29,7 @@
 .descriptionBox {
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 }

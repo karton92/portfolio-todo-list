@@ -1,6 +1,10 @@
 .dayDetails {
   display: flex;
   width: 100%;
+  @media (max-width: 600px) {
+    width: auto;
+    padding: 5px;
+  }
 }
 
 .infoItem {

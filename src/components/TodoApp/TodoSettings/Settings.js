@@ -9,6 +9,7 @@ import uk from "../../../images/uk.png";
 import blue from "../../../images/blue.png";
 import pink from "../../../images/pink.png";
 import { RiSettings4Line } from "react-icons/ri";
+import { MdOutlineEditLocation } from "react-icons/md";
 
 const Settings = () => {
   const [settings, setSettings] = useState(false);
@@ -34,7 +35,7 @@ const Settings = () => {
   };
 
   const resetLocation = () => {
-    console.log("Wypierdalaj!");
+    console.log("Kruca Fux coś poszło nie tak!");
   };
 
   return (
@@ -50,8 +51,12 @@ const Settings = () => {
           <img onClick={() => setPinkTheme(false)} src={blue} alt="blue" />
           <img onClick={() => setPinkTheme(true)} src={pink} alt="pink" />
         </div>
-
-        <button onClick={resetLocation}>Reset Location</button>
+        <div className="location">
+          <p>{english ? "reset location" : "reset lokacji"}</p>
+          <button onClick={resetLocation}>
+            <MdOutlineEditLocation />
+          </button>
+        </div>
       </div>
       <div className="settings-icon">
         <RiSettings4Line onClick={handleSettings} />

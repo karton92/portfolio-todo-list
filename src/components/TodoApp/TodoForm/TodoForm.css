@@ -20,9 +20,15 @@
   border-radius: 4px 0 0 4px;
   border: 2px solid white;
   outline: none;
-  width: 320px;
+  width: 100%;
   background: transparent;
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .todo-input {
+    padding: 5px;
+  }
 }
 
 .todo-input::-webkit-input-placeholder {
@@ -43,6 +49,21 @@
 .todo-input::placeholder {
   color: #e2e2e2;
   font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .todo-input::-webkit-input-placeholder {
+    padding: 5px;
+  }
+  .todo-input:-ms-input-placeholder {
+    padding: 5px;
+  }
+  .todo-input::-ms-input-placeholder {
+    padding: 5px;
+  }
+  .todo-input::placeholder {
+    padding: 5px;
+  }
 }
 
 .todo-input .edit {

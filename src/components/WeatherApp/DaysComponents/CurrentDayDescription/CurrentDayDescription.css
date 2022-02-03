@@ -5,6 +5,13 @@
   width: 100%;
 }
 
+@media (max-width: 600px) {
+  .dayDetails {
+    width: auto;
+    padding: 5px;
+  }
+}
+
 .infoItem {
   width: 100%;
   margin: 0 10px;

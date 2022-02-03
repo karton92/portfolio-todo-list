@@ -10,4 +10,26 @@
   border-radius: 15px;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .weekList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: auto;
+    font-size: 12px;
+  }
+}
+
+.weekList .weekday {
+  width: 70px;
+}
+
+@media (max-width: 600px) {
+  .weekList .weekday {
+    width: 55px;
+  }
+}
 /*# sourceMappingURL=UpcomingDays.css.map */
