@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-  width: 80%;
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 }
 
 .todo-input {
@@ -13,10 +15,21 @@
   width: 100%;
   background: transparent;
   color: #fff;
+  @media (max-width: 600px) {
+    padding: 5px;
+  }
 
   &::placeholder {
     color: #e2e2e2;
     font-size: 1.2rem;
+    @media (max-width: 600px) {
+      padding: 5px;
+    }
+  }
+
+  // SPRAWDZIĆ DO CZEGO TO BYLO
+  .edit {
+    border: 2px solid #149fff;
   }
 }
 
@@ -44,16 +57,23 @@
   svg {
     font-size: 22px;
   }
+
+  // SPRAWDZIĆ DO CZEGO TO BYLO
+  .edit {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%
+    );
+    padding: 16px 22px;
+    color: red;
+  }
 }
 
 .update {
   font-size: 20px;
   transform: translate(0, 2px);
   padding: 12px;
-  @media (max-width: 600px) {
-    font-size: 12px;
-    padding: 6px;
-  }
 }
 
 .pink {
