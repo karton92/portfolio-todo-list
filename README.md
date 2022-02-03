@@ -5,7 +5,7 @@ I would like to present my first serious application.<br>
 Work on this App is still ongoing, so I hope it will get even better in the near future.<br>
 Enjoy it!<br>
 
-<p><strong>Check out my App on GH-Pages:</strong> <a href="https://karton92.github.io/portfolio-todo-list/">https://karton92.github.io/portfolio-todo-list/</a></p>
+<p><strong>Check out my App on GH-Pages:</strong> <a target="_blank" rel="noopener noreferrer" href="https://karton92.github.io/portfolio-todo-list/">https://karton92.github.io/portfolio-todo-list/</a></p>
 
 Im use simple API from https://www.metaweather.com so you can find only the biggest towns (most often capitals).<br><br>
 Also I'm use here:<br>
