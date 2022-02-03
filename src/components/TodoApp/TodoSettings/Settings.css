@@ -102,7 +102,7 @@
 @media (max-width: 600px) {
   .settings img {
     height: 25px;
-    margin: 5px;
+    margin: 2px;
   }
 }
 
@@ -172,7 +172,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 10px;
+    margin: 5px;
     width: 33%;
   }
   .settings p {

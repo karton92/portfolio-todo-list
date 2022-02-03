@@ -47,6 +47,7 @@
 
 @media (max-width: 600px) {
   .todo-app {
+    height: 706px;
     min-width: 320px;
     margin: 10px;
   }
@@ -90,6 +91,12 @@
   height: 40%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+@media (max-width: 600px) {
+  .todo-container {
+    height: auto;
+  }
 }
 
 .todo-container::-webkit-scrollbar {
