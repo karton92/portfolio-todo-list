@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import TodoForm from "../TodoForm/TodoForm";
+import { AppContext } from "../../Context/AppContext";
 import { RiCloseCircleLine, RiCheckboxCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 import "./Todo.css";
+import ReadMoreReact from "read-more-react";
 
 const Todo = ({ filteredTodos, completeTodo, removeTodo, editTodo }) => {
+  const { english } = useContext(AppContext);
+
   const [edit, setEdit] = useState({
     id: null,
     value: "",
@@ -29,7 +33,15 @@ const Todo = ({ filteredTodos, completeTodo, removeTodo, editTodo }) => {
         ${todo.isDelete ? "fall" : ""}`}
       key={index}
     >
-      <div key={todo.id}>{todo.text}</div>
+      <ReadMoreReact
+        key={todo.id}
+        text={todo.text}
+        min="23"
+        ideal="30"
+        max="90"
+        readMoreText={english ? "Read more..." : "Pokaż więcej..."}
+      />
+
       <div className="icons">
         <RiCheckboxCircleLine
           onClick={() => completeTodo(todo.id)}

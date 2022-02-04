@@ -1,4 +1,6 @@
 .todo-row {
+  max-width: 500px;
+  height: auto;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   display: -webkit-box;
@@ -10,6 +12,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 4px auto;
   color: #fff;
   font-size: 1.1rem;
@@ -43,7 +47,8 @@
 }
 
 .icons {
-  margin-right: -15px;
+  width: auto;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,7 +60,6 @@
 }
 
 .icons .delete-icon {
-  margin-right: 5px;
   color: #fff;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
@@ -76,7 +80,6 @@
 }
 
 .icons .complete-icon {
-  margin-right: 5px;
   color: #fff;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
@@ -89,5 +92,36 @@
 .icons .complete .complete-icon {
   color: #0cfa1c;
   opacity: 1;
+}
+
+.display-text-group {
+  max-width: 350px;
+  height: auto;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+  .display-text-group {
+    max-width: 250px;
+  }
+}
+
+.display-text-group span {
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.read-more-button {
+  text-align: left;
+  font-size: 14px;
+  color: white;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.read-more-button:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=Todo.css.map */

@@ -14,7 +14,7 @@ const TodoForm = (props) => {
   });
 
   const handleInput = (e) => {
-    setInput(e.target.value);
+    if (e.target.value) setInput(e.target.value);
   };
 
   const handleAddTodo = (e) => {
@@ -42,7 +42,7 @@ const TodoForm = (props) => {
           <input
             type="text"
             placeholder={updateInputText}
-            maxLength="40"
+            maxLength="90"
             value={input}
             onChange={handleInput}
             name="text"
@@ -56,7 +56,7 @@ const TodoForm = (props) => {
           <input
             type="text"
             placeholder={addInputText}
-            maxLength="40"
+            maxLength="90"
             value={input}
             onChange={handleInput}
             name="text"

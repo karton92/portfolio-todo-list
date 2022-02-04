@@ -1,8 +1,11 @@
 .todo-row {
+  max-width: 500px;
+  height: auto;
   transition: 0.5s;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin: 4px auto;
   color: #fff;
   font-size: 1.1rem;
@@ -45,14 +48,16 @@
 }
 
 .icons {
-  margin-right: -15px;
+  width: auto;
+  position: relative;
+  // margin-right: -15px;
   display: flex;
   align-items: center;
   font-size: 32px;
   cursor: pointer;
 
   .delete-icon {
-    margin-right: 5px;
+    // margin-right: 5px;
     color: #fff;
     transition: ease 0.3s;
     &:hover {
@@ -69,7 +74,7 @@
   }
 
   .complete-icon {
-    margin-right: 5px;
+    // margin-right: 5px;
     color: #fff;
     transition: ease 0.3s;
     &:hover {
@@ -80,5 +85,30 @@
   .complete .complete-icon {
     color: rgb(12, 250, 28);
     opacity: 1;
+  }
+}
+
+.display-text-group {
+  max-width: 350px;
+  height: auto;
+  text-align: left;
+  word-wrap: break-word;
+  @media (max-width: 600px) {
+    max-width: 250px;
+  }
+  span {
+    word-wrap: break-word;
+    text-align: left;
+  }
+}
+
+.read-more-button {
+  text-align: left;
+  font-size: 14px;
+  color: white;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
   }
 }
