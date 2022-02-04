@@ -17,25 +17,36 @@ const Form = ({ submitHandler }) => {
   const { pinkTheme, english } = useContext(AppContext);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        aria-label="location"
-        type="text"
-        className="weather-input"
-        placeholder={english ? "Search for location" : "Szukaj lokalizacji"}
-        required
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-      />
+    <>
+      {english ? (
+        <h1>
+          Weather <strong>Forecast</strong>
+        </h1>
+      ) : (
+        <h1>
+          Prognoza <strong>Pogody</strong>
+        </h1>
+      )}
+      <form onSubmit={handleSubmit}>
+        <input
+          aria-label="location"
+          type="text"
+          className="weather-input"
+          placeholder={english ? "Search for capital city" : "Szukaj stolicy"}
+          required
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        />
 
-      <button
-        onClick={handleSubmit}
-        type="submit"
-        className={`weather-button ${pinkTheme ? "pink" : null}`}
-      >
-        {english ? "SEARCH" : "SZUKAJ"}
-      </button>
-    </form>
+        <button
+          onClick={handleSubmit}
+          type="submit"
+          className={`weather-button ${pinkTheme ? "pink" : null}`}
+        >
+          {english ? "SEARCH" : "SZUKAJ"}
+        </button>
+      </form>
+    </>
   );
 };
 

@@ -1,17 +1,25 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import { AppContext } from "../../Context/AppContext";
+// import { BrowserView } from "react-device-detect";
 import { FaPlus } from "react-icons/fa";
 import "./TodoForm.css";
 
 const TodoForm = (props) => {
   const [input, setInput] = useState(props.edit ? props.edit.value : "");
   const inputRef = useRef(null);
+  const testMoblileDetect = false;
 
   const { pinkTheme, english, language } = useContext(AppContext);
 
   useEffect(() => {
-    inputRef.current.focus();
-  });
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      ) === false
+    ) {
+      inputRef.current.focus();
+    }
+  }, [input]);
 
   const handleInput = (e) => {
     if (e.target.value) setInput(e.target.value);
@@ -47,7 +55,8 @@ const TodoForm = (props) => {
             onChange={handleInput}
             name="text"
             className="todo-input"
-            ref={inputRef}
+            // ref={inputRef}
+            ref={testMoblileDetect ? inputRef : null}
           />
           <button className={`${button} update`}>{updateButtonText}</button>
         </>

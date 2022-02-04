@@ -1,8 +1,4 @@
 .todo-row {
-  max-width: 500px;
-  height: auto;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,6 +10,10 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 500px;
+  height: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   margin: 4px auto;
   color: #fff;
   font-size: 1.1rem;
@@ -48,13 +48,6 @@
 
 .icons {
   width: auto;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: 32px;
   cursor: pointer;
 }
@@ -85,11 +78,13 @@
   transition: ease 0.3s;
 }
 
-.icons .complete-icon:hover {
-  color: #0cfa1c;
+@media (min-width: 768px) {
+  .icons .complete-icon:hover {
+    color: #0cfa1c;
+  }
 }
 
-.icons .complete .complete-icon {
+.complete .complete-icon {
   color: #0cfa1c;
   opacity: 1;
 }
