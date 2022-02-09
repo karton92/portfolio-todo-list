@@ -58,8 +58,10 @@
   transition: ease 0.3s;
 }
 
-.icons .delete-icon:hover {
-  color: #e70000;
+@media (min-width: 768px) {
+  .icons .delete-icon:hover {
+    color: #e70000;
+  }
 }
 
 .icons .edit-icon {
@@ -92,7 +94,7 @@
 .display-text-group {
   max-width: 350px;
   height: auto;
-  text-align: left;
+  text-align: justify;
   word-wrap: break-word;
 }
 

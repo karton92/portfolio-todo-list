@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 import pinkBG from "../../images/bgPink.jpg";
 
 export const AppContext = createContext();
@@ -15,9 +15,15 @@ const AppProvider = ({ children }) => {
   };
 
   const language = {
-    title: "What we are doing today?",
+    title: {
+      eng: "What we are doing today?",
+      pol: "Jakie plany na dziś?",
+    },
     input: ["Add todo", "Update todo", "Update"],
-    sort: "Sort by: ",
+    options: {
+      eng: "Sort by: ",
+      pol: "Sortuj: ",
+    },
     sortOptions: [
       { eng: "all", pol: "wszystkie" },
       { eng: "complete", pol: "zakończone" },

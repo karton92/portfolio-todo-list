@@ -55,8 +55,10 @@
   .delete-icon {
     color: #fff;
     transition: ease 0.3s;
-    &:hover {
-      color: rgb(231, 0, 0);
+    @media (min-width: 768px) {
+      &:hover {
+        color: rgb(231, 0, 0);
+      }
     }
   }
 
@@ -87,7 +89,7 @@
 .display-text-group {
   max-width: 350px;
   height: auto;
-  text-align: left;
+  text-align: justify;
   word-wrap: break-word;
   @media (max-width: 600px) {
     max-width: 250px;

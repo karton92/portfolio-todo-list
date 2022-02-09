@@ -8,6 +8,9 @@ import ReadMoreReact from "read-more-react";
 
 const Todo = ({ filteredTodos, completeTodo, removeTodo, editTodo }) => {
   const { english } = useContext(AppContext);
+  const minLettersLength = 23;
+  const idealLettersLength = 30;
+  const maxLettersLength = 90;
 
   const [edit, setEdit] = useState({
     id: null,
@@ -36,9 +39,9 @@ const Todo = ({ filteredTodos, completeTodo, removeTodo, editTodo }) => {
       <ReadMoreReact
         key={todo.id}
         text={todo.text}
-        min="23"
-        ideal="30"
-        max="90"
+        min={minLettersLength}
+        ideal={idealLettersLength}
+        max={maxLettersLength}
         readMoreText={english ? "Read more..." : "Pokaż więcej..."}
       />
 

@@ -6,7 +6,7 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-.containerTodo {
+.container-todo {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,7 +21,7 @@
 }
 
 @media (max-width: 600px) {
-  .containerTodo {
+  .container-todo {
     padding: 5px;
     -webkit-box-align: start;
         -ms-flex-align: start;

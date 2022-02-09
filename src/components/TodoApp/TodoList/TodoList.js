@@ -30,8 +30,6 @@ const TodoList = () => {
       : (document.body.style.backgroundColor = "rgb(47, 127, 192)");
   }, [pinkTheme]);
 
-  // /^\s*$/ is regex for empty string or string with only spaces
-
   //Argument "todo" w addTodo to przekazany obiekt z TodoForm z handleAddTodo
 
   // FUNCTIONS
@@ -60,6 +58,7 @@ const TodoList = () => {
 
   const removeTodo = (id) => {
     const newTodoArr = [...todos].filter((todo) => todo.id !== id);
+    //REMOVED FOCUS TODO
     let removedTodo = todos.map((todo) => {
       if (todo.id === id) {
         todo.isDelete = true;
@@ -67,12 +66,14 @@ const TodoList = () => {
       return todo;
     });
     setTodos(removedTodo);
+    //RERENDER NEW ARR WITH TODOS WITHOUT FOCUSED AFTER DELETE ANIMATION END
     setTimeout(() => setTodos(newTodoArr), 300);
   };
 
+  // /^\s*$/ is regex (regular expression) for empty string or string with only spaces & test is method for regular expression
   const editTodo = (todoId, newValue) => {
     if (!newValue.text || /^\s*$/.test(newValue.text)) {
-      return console.log("Nie możesz dodać takiego tekstu");
+      return console.log("Wpisz poprawnie tekst");
     }
     setTodos((prev) =>
       prev.map((item) => (item.id === todoId ? newValue : item))
@@ -108,13 +109,13 @@ const TodoList = () => {
   };
 
   // OTHERS
-  const titleText = english ? language.title : "Jakie plany na dziś?";
+  const titleText = english ? language.title.eng : language.title.pol;
   const bgStyle = pinkTheme ? { background: theme.bgColor } : null;
   const imgStyle = pinkTheme ? { backgroundImage: theme.bgImg } : null;
 
   return (
     <>
-      <div className="containerTodo" style={bgStyle}>
+      <div className="container-todo" style={bgStyle}>
         <div className="todo-app" style={imgStyle}>
           <div className="settings-panel">
             <Settings />

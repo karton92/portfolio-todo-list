@@ -7,7 +7,7 @@ const TodoSort = ({ setStatus }) => {
   const { english, language } = useContext(AppContext);
 
   // OTHERS
-  const sortText = english ? language.sort : "Sortuj: ";
+  const sortText = english ? language.options.eng : language.options.pol;
 
   const options = english
     ? language.sortOptions.map(({ eng }) => (

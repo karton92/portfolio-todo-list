@@ -17,7 +17,6 @@ const TodoForm = (props) => {
         navigator.userAgent
       ) === false
     ) {
-      inputRef.current.focus();
     }
   }, [input]);
 

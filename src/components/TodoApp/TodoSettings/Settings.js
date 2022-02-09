@@ -14,7 +14,7 @@ import { MdOutlineEditLocation } from "react-icons/md";
 const Settings = () => {
   const [settings, setSettings] = useState(false);
   const [zindex, setZindex] = useState(false);
-  // const { forecast, setLoading, setForecast } = useForecast();
+  // const { forecast, setForecast } = useForecast();
 
   // CONTEXT
   const { pinkTheme, setPinkTheme, theme, english, setEnglish, language } =
@@ -36,6 +36,7 @@ const Settings = () => {
 
   const resetLocation = () => {
     console.log("Kruca Fux coś poszło nie tak!");
+    // setForecast(false);
   };
 
   return (
