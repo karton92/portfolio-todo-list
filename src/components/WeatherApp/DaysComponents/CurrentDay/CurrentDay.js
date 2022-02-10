@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AppContext } from "../../../Context/AppContext";
 
 import locationIcon from "./assets/location-pin.png";
-import "./CurrentDay.css";
+import "./CurrentDay.scss";
 
 const CurrentDay = ({
   weekdayPL,

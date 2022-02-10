@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../../Context/AppContext";
-import "./CurrentDayDescriptionItem.css";
+import "./CurrentDayDescriptionItem.scss";
 
 const CurrentDayDescriptionItem = ({ name, value, unit, id }) => {
   const { english } = useContext(AppContext);

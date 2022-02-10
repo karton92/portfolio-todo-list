@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { AppContext } from "../../Context/AppContext";
 
-import "./Form.css";
+import "./Form.scss";
 
 const Form = ({ submitHandler }) => {
   const [location, setLocation] = useState("");

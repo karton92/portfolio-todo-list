@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,KAAK,EAAE,IAAI;EACX,cAAc,EAAE,SAAS;EACzB,SAAS,EAAE,IAAI;CAKhB;;AAJC,MAAM,EAAE,SAAS,EAAE,KAAK;EAN1B,AAAA,QAAQ,CAAC;IAOL,SAAS,EAAE,IAAI;IACf,KAAK,EAAE,IAAI;GAEd;;;AAED,AAAA,SAAS,CAAC;EAGR,WAAW,EAAE,GAAG;CACjB",
-    "sources": [
-        "CurrentDayDescriptionItem.scss"
-    ],
-    "names": [],
-    "file": "CurrentDayDescriptionItem.css"
-}

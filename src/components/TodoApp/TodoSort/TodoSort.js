@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../Context/AppContext";
-import "./TodoSort.css";
+import "./TodoSort.scss";
 
 const TodoSort = ({ setStatus }) => {
   // CONTEXT

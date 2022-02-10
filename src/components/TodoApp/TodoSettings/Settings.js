@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { AppContext } from "../../Context/AppContext";
-import useForecast from "../../WeatherApp/hooks/useForecast";
-import "./Settings.css";
+import "./Settings.scss";
 
 //Settings images & icons
 import pol from "../../../images/pol.png";
@@ -9,12 +8,10 @@ import uk from "../../../images/uk.png";
 import blue from "../../../images/blue.png";
 import pink from "../../../images/pink.png";
 import { RiSettings4Line } from "react-icons/ri";
-import { MdOutlineEditLocation } from "react-icons/md";
 
 const Settings = () => {
   const [settings, setSettings] = useState(false);
   const [zindex, setZindex] = useState(false);
-  // const { forecast, setForecast } = useForecast();
 
   // CONTEXT
   const { pinkTheme, setPinkTheme, theme, english, setEnglish, language } =
@@ -34,11 +31,6 @@ const Settings = () => {
     } else return "settings";
   };
 
-  const resetLocation = () => {
-    console.log("Kruca Fux coś poszło nie tak!");
-    // setForecast(false);
-  };
-
   return (
     <>
       <div className={handleClass()} style={settingsStyle}>
@@ -51,12 +43,6 @@ const Settings = () => {
           <p>{english ? language.settings[1] : "motyw"}</p>
           <img onClick={() => setPinkTheme(false)} src={blue} alt="blue" />
           <img onClick={() => setPinkTheme(true)} src={pink} alt="pink" />
-        </div>
-        <div className="location">
-          <p>{english ? "reset location" : "reset lokacji"}</p>
-          <button onClick={resetLocation}>
-            <MdOutlineEditLocation />
-          </button>
         </div>
       </div>
       <div className="settings-icon">

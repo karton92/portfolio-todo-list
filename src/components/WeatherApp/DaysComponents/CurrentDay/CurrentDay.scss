@@ -1,5 +1,4 @@
-@import "../../Utils/utils";
-
+@use "../../../styles" as *;
 .card {
   border-radius: $mainBorderRadius;
   background-image: linear-gradient(

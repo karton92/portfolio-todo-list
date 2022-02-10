@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../../Context/AppContext";
 
-import "./UpcomingDaysItem.css";
+import "./UpcomingDaysItem.scss";
 
 const imgUrlBase = "https://www.metaweather.com/static/";
 

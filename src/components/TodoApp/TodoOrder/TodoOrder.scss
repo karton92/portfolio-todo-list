@@ -14,13 +14,11 @@ select {
   font-size: 14px;
   padding: 2px;
   top: -1px;
-}
+  label {
+    font-size: 20px;
+  }
 
-select label {
-  font-size: 20px;
+  option {
+    color: black;
+  }
 }
-
-select option {
-  color: black;
-}
-/*# sourceMappingURL=TodoSort.css.map */

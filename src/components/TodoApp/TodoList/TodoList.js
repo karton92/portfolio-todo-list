@@ -1,145 +1,66 @@
-import React, { useEffect, useState, useContext } from "react";
-
-// COMPONENTS
+import React, { useState, useContext } from "react";
 import TodoForm from "../TodoForm/TodoForm";
-import Settings from "../TodoSettings/Settings";
-import Todo from "../Todo/Todo";
-import TodoSort from "../TodoSort/TodoSort";
-import WeatherApp from "../../WeatherApp/WeatherApp";
-
-// CONTEXT
 import { AppContext } from "../../Context/AppContext";
+import { RiCloseCircleLine, RiCheckboxCircleLine } from "react-icons/ri";
+import { TiEdit } from "react-icons/ti";
+import "./TodoList.scss";
+import ReadMoreReact from "read-more-react";
 
-// CSS
-import "./TodoList.css";
+const Todo = ({ filteredTodos, completeTodo, removeTodo, editTodo }) => {
+  const { english } = useContext(AppContext);
+  const minLettersLength = 23;
+  const idealLettersLength = 30;
+  const maxLettersLength = 90;
 
-const TodoList = () => {
-  // HOOKS
-  const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState("all");
-  const [filteredTodos, setFilteredTodos] = useState([]);
-  const { pinkTheme, theme, english, language } = useContext(AppContext);
+  const [edit, setEdit] = useState({
+    id: null,
+    value: "",
+  });
 
-  // USE EFFECT
-  useEffect(() => {
-    filterHandler();
-  }, [todos, status]);
-  useEffect(() => {
-    pinkTheme
-      ? (document.body.style.backgroundColor = "rgb(209, 103, 160)")
-      : (document.body.style.backgroundColor = "rgb(47, 127, 192)");
-  }, [pinkTheme]);
-
-  //Argument "todo" w addTodo to przekazany obiekt z TodoForm z handleAddTodo
-
-  // FUNCTIONS
-  const addTodo = (todo) => {
-    if (!todo.text || /^\s*$/.test(todo.text)) {
-      return console.log("Nie możesz dodać takiego tekstu");
-    } else if (todos.length > 10) {
-      return alert(`
-        Hola hola!
-        Czy przypadkiem nie za dużo tych zadań na raz? :)
-        Najpierw skończ poprzednie zadania i zrób miejsce dla nowych!`);
-    }
-    const newTodos = [todo, ...todos];
-    setTodos(newTodos);
-  };
-
-  const completeTodo = (id) => {
-    let updatedTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        todo.isDone = !todo.isDone;
-      }
-      return todo;
+  const submitEdit = (value) => {
+    editTodo(edit.id, value);
+    setEdit({
+      id: null,
+      value: "",
     });
-    setTodos(updatedTodos);
   };
 
-  const removeTodo = (id) => {
-    const newTodoArr = [...todos].filter((todo) => todo.id !== id);
-    //REMOVED FOCUS TODO
-    let removedTodo = todos.map((todo) => {
-      if (todo.id === id) {
-        todo.isDelete = true;
-      }
-      return todo;
-    });
-    setTodos(removedTodo);
-    //RERENDER NEW ARR WITH TODOS WITHOUT FOCUSED AFTER DELETE ANIMATION END
-    setTimeout(() => setTodos(newTodoArr), 300);
-  };
+  if (edit.id) {
+    return <TodoForm edit={edit} onSubmit={submitEdit} />;
+  }
 
-  // /^\s*$/ is regex (regular expression) for empty string or string with only spaces & test is method for regular expression
-  const editTodo = (todoId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
-      return console.log("Wpisz poprawnie tekst");
-    }
-    setTodos((prev) =>
-      prev.map((item) => (item.id === todoId ? newValue : item))
-    );
-  };
+  return filteredTodos.map((todo, index) => (
+    <div
+      className={`todo-row
+        ${todo.isDone ? "complete" : ""}
+        ${todo.isDelete ? "fall" : ""}`}
+      key={index}
+    >
+      <ReadMoreReact
+        key={todo.id}
+        text={todo.text}
+        min={minLettersLength}
+        ideal={idealLettersLength}
+        max={maxLettersLength}
+        readMoreText={english ? "Read more..." : "Pokaż więcej..."}
+      />
 
-  const filterHandler = () => {
-    switch (status) {
-      case "complete":
-        const completed = todos.filter((todo) => todo.isDone);
-        setFilteredTodos(completed);
-        break;
-      case "uncomplete":
-        const uncompleted = todos.filter((todo) => !todo.isDone);
-        setFilteredTodos(uncompleted);
-        break;
-      case "latest":
-        const latest = [...todos].sort(function (a, b) {
-          return b.data - a.data;
-        });
-        setFilteredTodos(latest);
-        break;
-      case "oldest":
-        const oldest = [...todos].sort(function (a, b) {
-          return a.data - b.data;
-        });
-        setFilteredTodos(oldest);
-        break;
-      default:
-        setFilteredTodos(todos);
-        break;
-    }
-  };
-
-  // OTHERS
-  const titleText = english ? language.title.eng : language.title.pol;
-  const bgStyle = pinkTheme ? { background: theme.bgColor } : null;
-  const imgStyle = pinkTheme ? { backgroundImage: theme.bgImg } : null;
-
-  return (
-    <>
-      <div className="container-todo" style={bgStyle}>
-        <div className="todo-app" style={imgStyle}>
-          <div className="settings-panel">
-            <Settings />
-            <h1>{titleText}</h1>
-          </div>
-          <WeatherApp />
-          <div className="form-panel">
-            <TodoForm onSubmit={addTodo} />
-            <TodoSort todos={todos} setStatus={setStatus} />
-          </div>
-          <div
-            className={`todo-container ${pinkTheme ? "pink-scrollbar" : ""}`}
-          >
-            <Todo
-              filteredTodos={filteredTodos}
-              completeTodo={completeTodo}
-              removeTodo={removeTodo}
-              editTodo={editTodo}
-            />
-          </div>
-        </div>
+      <div className="icons">
+        <RiCheckboxCircleLine
+          onClick={() => completeTodo(todo.id)}
+          className="complete-icon"
+        />
+        <TiEdit
+          onClick={() => setEdit({ id: todo.id, value: todo.text })}
+          className="edit-icon"
+        />
+        <RiCloseCircleLine
+          onClick={() => removeTodo(todo.id)}
+          className="delete-icon"
+        />
       </div>
-    </>
-  );
+    </div>
+  ));
 };
 
-export default TodoList;
+export default Todo;

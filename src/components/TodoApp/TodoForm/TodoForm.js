@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import { AppContext } from "../../Context/AppContext";
 // import { BrowserView } from "react-device-detect";
 import { FaPlus } from "react-icons/fa";
-import "./TodoForm.css";
+import "./TodoForm.scss";
 
 const TodoForm = (props) => {
   const [input, setInput] = useState(props.edit ? props.edit.value : "");

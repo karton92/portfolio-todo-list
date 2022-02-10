@@ -17,6 +17,8 @@
     "react-moment": "^1.1.1",
     "react-scripts": "4.0.3",
     "read-more-react": "^1.0.10",
+    "sass": "^1.49.7",
+    "scss": "^0.2.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
