@@ -1,5 +1,5 @@
 import React from "react";
-import "./WeatherApp.css";
+import "./WeatherApp.scss";
 import Form from "./Form/Form";
 import Loader from "./Loader/Loader";
 import Error from "./Error/Error";

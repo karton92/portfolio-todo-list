@@ -1,5 +1,5 @@
 import React from "react";
-import "./CurrentDayDescription.css";
+import "./CurrentDayDescription.scss";
 import CurrentDayDescriptionItem from "../CurrentDayDescriptionItem/CurrentDayDescriptionItem";
 
 const CurrentDayDescription = ({ forecast }) => (

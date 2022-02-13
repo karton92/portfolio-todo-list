@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import TodoList from "./components/TodoApp/TodoList/TodoList";
-
-// CONTEXT
-import AppProvider from "./components/Context/AppContext";
+import App from "./components/App";
+import AppProvider from "./context/AppContext";
 
 ReactDOM.render(
   <AppProvider>
-    <TodoList />
+    <App />
   </AppProvider>,
   document.getElementById("root")
 );

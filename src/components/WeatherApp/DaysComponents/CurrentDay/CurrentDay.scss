@@ -1,5 +1,4 @@
-@import "../../Utils/utils";
-
+@use "../../../../styles" as *;
 .card {
   border-radius: $mainBorderRadius;
   background-image: linear-gradient(
@@ -49,11 +48,15 @@
 .cardInner {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
   z-index: 1;
   height: 100%;
+  max-width: 140px;
   padding: 5px 10px;
   @media (max-width: 600px) {
+    flex-wrap: nowrap;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -62,16 +65,29 @@
   }
 }
 
-h2 {
-  font-size: 20px;
+.upperBox {
+  h2 {
+    margin-bottom: 0;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  font-size: 12px;
+  p {
+    font-size: 16px;
+  }
+  span {
+    font-size: 20px;
+  }
 }
 
-.upperBox {
-  // width: 100%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: left;
-  // align-items: left;
-  font-size: 12px;
-  // margin: 5px;
+.lowerBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  h2 {
+    margin-bottom: 0;
+  }
+  h5 {
+    font-size: 16px;
+  }
 }

@@ -1,4 +1,4 @@
-@import "../Utils/utils";
+@use "../../../styles" as *;
 
 .weather-input {
   padding: 14px 32px 14px 16px;
@@ -13,11 +13,10 @@
     color: #e2e2e2;
     font-size: 1.2rem;
   }
+}
 
-  // SPRAWDZIĆ DO CZEGO TO BYLO
-  .edit {
-    border: 2px solid #149fff;
-  }
+h2 {
+  margin: 10px;
 }
 
 .weather-button {
@@ -31,11 +30,6 @@
   border-radius: 10px;
   cursor: pointer;
   outline: none;
-  background: linear-gradient(
-    90deg,
-    rgb(37, 117, 192) 0%,
-    rgb(80, 164, 185) 100%
-  );
   color: #fff;
   text-transform: capitalize;
   transition: all 0.3s ease;
@@ -47,12 +41,4 @@
   @media (max-width: 600px) {
     margin: 10px;
   }
-}
-
-.pink {
-  background: linear-gradient(
-    to bottom right,
-    rgba(231, 145, 205, 0.5),
-    rgba(238, 53, 130, 0.5)
-  );
 }

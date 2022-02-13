@@ -1,20 +1,20 @@
 import React, { useContext } from "react";
-import { AppContext } from "../../../Context/AppContext";
+// import { AppContext } from "../../../Context/AppContext";
+import { AppContext } from "../../../../context/AppContext";
 
 import locationIcon from "./assets/location-pin.png";
-import "./CurrentDay.css";
+import "./CurrentDay.scss";
 
 const CurrentDay = ({
   weekdayPL,
   weekdayENG,
-  datePL,
-  dateENG,
+  date,
   location,
   temperature,
   weatherIcon,
   weatherDescription,
 }) => {
-  const { pinkTheme, english } = useContext(AppContext);
+  const { currentTheme, currentLanguage } = useContext(AppContext);
 
   const weatherDescriptionPL = (weather) => {
     switch (weather) {
@@ -44,11 +44,11 @@ const CurrentDay = ({
   };
 
   return (
-    <div className={`card ${pinkTheme ? "pinkGradient" : ""}`}>
+    <div className={`card ${currentTheme === "pink" ? "pinkGradient" : ""}`}>
       <div className="cardInner">
         <div className="upperBox">
-          <h2>{english ? weekdayENG : weekdayPL}</h2>
-          <p>{english ? dateENG : datePL}</p>
+          <h2>{currentLanguage === "en" ? weekdayENG : weekdayPL}</h2>
+          <p>{date}</p>
           <p>
             <img
               width="10"
@@ -65,7 +65,7 @@ const CurrentDay = ({
             <span>{temperature}</span>°C
           </h2>
           <h5>
-            {english
+            {currentLanguage === "en"
               ? weatherDescription
               : weatherDescriptionPL(weatherDescription)}
           </h5>

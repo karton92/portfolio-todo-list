@@ -1,93 +1,112 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-.container-todo {
-  height: 100vh;
+.todo-row {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  background: rgb(47, 127, 192);
-  @media (max-width: 600px) {
-    padding: 5px;
-    align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 500px;
+  height: auto;
+  transition: 0.5s;
+  margin: 4px auto;
+  color: #fff;
+  font-size: 1.1rem;
+  background: linear-gradient(
+    90deg,
+    rgb(218, 136, 78) 0%,
+    rgb(226, 85, 30) 100%
+  );
+  padding: 13px;
+  border-radius: 5px;
+  width: 90%;
+
+  &:nth-child(4n + 2) {
+    background: linear-gradient(
+      90deg,
+      rgb(89, 180, 135) 0%,
+      rgb(73, 131, 92) 100%
+    );
+  }
+  &:nth-child(4n + 3) {
+    background: linear-gradient(
+      90deg,
+      rgb(190, 125, 187) 0%,
+      rgb(184, 48, 120) 100%
+    );
+  }
+  &:nth-child(4n + 4) {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgb(16, 98, 206) 100%
+    );
   }
 }
 
-.todo-app {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  min-width: 560px;
-  height: 95vh;
-  max-height: 1000px;
-  text-align: center;
-  border-radius: 10px;
-  transition: 0.3s;
-  background-image: url("../../../images/bgBlue.jpg");
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+.complete {
+  transition: 0.5s;
+  text-decoration: line-through;
+  opacity: 0.4;
+}
 
-  @media (max-width: 600px) {
-    height: 706px;
-    min-width: 320px;
-    margin: 10px;
+.icons {
+  width: auto;
+  font-size: 32px;
+  cursor: pointer;
+
+  .delete-icon {
+    color: #fff;
+    transition: ease 0.3s;
+    @media (min-width: 768px) {
+      &:hover {
+        color: rgb(231, 0, 0);
+      }
+    }
   }
 
-  h1 {
-    margin-bottom: 15px;
-    margin-top: -35px;
+  .edit-icon {
     color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    @media (max-width: 600px) {
-      font-size: 16px;
+    transition: ease 0.3s;
+    &:hover {
+      color: rgb(255, 225, 57);
+    }
+  }
+
+  .complete-icon {
+    color: #fff;
+    transition: ease 0.3s;
+    @media (min-width: 768px) {
+      &:hover {
+        color: rgb(12, 250, 28);
+      }
     }
   }
 }
 
-.form-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.complete .complete-icon {
+  color: rgb(12, 250, 28);
+  opacity: 1;
 }
 
-.fall {
-  transform: translateY(8rem) rotateZ(20deg);
-  opacity: 0.3;
-}
-
-.todo-container {
-  height: 40%;
-  overflow-y: auto;
-  overflow-x: hidden;
-
+.display-text-group {
+  max-width: 350px;
+  height: auto;
+  text-align: justify;
+  word-wrap: break-word;
   @media (max-width: 600px) {
-    height: auto;
+    max-width: 250px;
   }
-
-  &::-webkit-scrollbar {
-    width: 10px;
-    border: none;
-  }
-
-  &::-webkit-scrollbar-track {
-    overflow: hidden;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgb(41, 171, 223);
-    outline: 5px solid rgba(0, 0, 0, 0);
-    border-radius: 8px;
-    margin: 30px;
-    padding: 10px;
-    height: 50px;
+  span {
+    word-wrap: break-word;
+    text-align: left;
   }
 }
 
-.pink-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 134, 201);
+.read-more-button {
+  text-align: left;
+  font-size: 14px;
+  color: white;
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }

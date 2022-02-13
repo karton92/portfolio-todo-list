@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.container-todo {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(47, 127, 192);
+  @media (max-width: 600px) {
+    padding: 5px;
+    align-items: flex-start;
+  }
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 560px;
+  height: 95vh;
+  max-height: 1000px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-image: url("../../images/bgBlue.jpg");
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 600px) {
+    height: 706px;
+    min-width: 320px;
+    margin: 10px;
+  }
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0.3;
+}
+
+.todo-container {
+  height: 40%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @media (max-width: 600px) {
+    height: auto;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(41, 171, 223);
+    outline: 5px solid rgba(0, 0, 0, 0);
+    border-radius: 8px;
+    margin: 30px;
+    padding: 10px;
+    height: 50px;
+  }
+}
+
+.pink-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 134, 201);
+}

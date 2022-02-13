@@ -1,5 +1,5 @@
 import React from "react";
-import "./Forecast.css";
+import "./Forecast.scss";
 
 import CurrentDay from "../DaysComponents/CurrentDay/CurrentDay";
 import CurrentDayDescription from "../DaysComponents/CurrentDayDescription/CurrentDayDescription";
