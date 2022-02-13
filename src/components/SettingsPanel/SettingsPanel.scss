@@ -1,3 +1,13 @@
+.bgBlue {
+  background-image: url("../../images/bgBlue.jpg");
+}
+
+.bgPink {
+  // background-image: url("../../images/bgPink.jpg");
+  background-color: black;
+  width: 10%;
+}
+
 .settings-icon {
   position: relative;
   top: 0;
@@ -23,18 +33,21 @@
 
 .settings {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   top: 10px;
   left: 100%;
   width: 0;
-  height: 185px;
+  height: 130px;
   transform: scale(0);
-  margin-bottom: -160px;
+  margin-bottom: -120px;
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
   transition: 0.3s ease;
   color: #fff;
   text-transform: uppercase;
-  background-image: url("../../../images/bgBlue.jpg");
+  // background-image: url("../../images/bgBlue.jpg");
 
   @media (max-width: 768px) {
     font-size: 25px;
@@ -102,22 +115,11 @@
       display: flex;
       margin: auto;
     }
-    // @media (max-width: 600px) {
-    //   height: 40px;
-    //   width: 40px;
-    //   color: yellow;
-    //   display: inline-block;
-    //   text-align: center;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   // margin: 5px;
-    // }
   }
 }
 
 .settings.active {
-  width: 140px;
+  width: 100px;
   transform: scale(1);
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -140,7 +142,7 @@
     transition: 0.3s ease;
     color: #fff;
     text-transform: uppercase;
-    background-image: url("../../../images/bgBlue.jpg");
+    background-image: url("../../images/bgBlue.jpg");
     div {
       display: flex;
       justify-items: end;

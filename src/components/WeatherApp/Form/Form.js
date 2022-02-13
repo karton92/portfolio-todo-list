@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
-import { AppContext } from "../../Context/AppContext";
-
+import { AppContext } from "../../../context/AppContext";
 import "./Form.scss";
 
 const Form = ({ submitHandler }) => {
@@ -14,25 +13,17 @@ const Form = ({ submitHandler }) => {
     setLocation("");
   };
 
-  const { pinkTheme, english } = useContext(AppContext);
+  const { theme, language } = useContext(AppContext);
 
   return (
     <>
-      {english ? (
-        <h1>
-          Weather <strong>Forecast</strong>
-        </h1>
-      ) : (
-        <h1>
-          Prognoza <strong>Pogody</strong>
-        </h1>
-      )}
+      <h2>{language.forecast}</h2>
       <form onSubmit={handleSubmit}>
         <input
           aria-label="location"
           type="text"
           className="weather-input"
-          placeholder={english ? "Search for capital city" : "Szukaj stolicy"}
+          placeholder={language.forecastInput}
           required
           value={location}
           onChange={(e) => setLocation(e.target.value)}
@@ -41,9 +32,10 @@ const Form = ({ submitHandler }) => {
         <button
           onClick={handleSubmit}
           type="submit"
-          className={`weather-button ${pinkTheme ? "pink" : null}`}
+          className={`weather-button`}
+          style={{ background: `${theme.bgButton}` }}
         >
-          {english ? "SEARCH" : "SZUKAJ"}
+          {language.forecastButton}
         </button>
       </form>
     </>

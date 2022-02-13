@@ -1,13 +1,6 @@
 import dayjs from "dayjs";
 import "dayjs/locale/pl";
 
-Object.defineProperty(String.prototype, "capitalize", {
-  value: function () {
-    return this.charAt(0).toUpperCase() + this.slice(1);
-  },
-  enumerable: false,
-});
-
 export const currentDayForecastDetails = (data) => [
   {
     name: {
@@ -65,16 +58,9 @@ export const currentDayForecastDetails = (data) => [
 ];
 
 export const getCurrentDayForecast = (data, title) => ({
-  weekdayPL: dayjs(data.applicable_date)
-    .locale("pl")
-    .format("dddd")
-    .capitalize(),
-  weekdayENG: dayjs(data.applicable_date).format("dddd").capitalize(),
-  datePL: dayjs(data.applicable_date)
-    .locale("pl")
-    .format("MMMM D")
-    .capitalize(),
-  dateENG: dayjs(data.applicable_date).format("MMMM D"),
+  weekdayPL: dayjs(data.applicable_date).locale("pl").format("dddd"),
+  weekdayENG: dayjs(data.applicable_date).format("dddd"),
+  date: dayjs(data.applicable_date).format("DD-MM-YYYY"),
   location: title,
   temperature: Math.round(data.the_temp),
   weatherIcon: `'https://www.metaweather.com/static/img/weather/${data.weather_state_abbr}.svg`,
@@ -82,7 +68,7 @@ export const getCurrentDayForecast = (data, title) => ({
 });
 
 export const getWeekdayPL = (date) =>
-  dayjs(date).locale("pl").format("dddd").capitalize().substring(0, 3);
+  dayjs(date).locale("pl").format("dddd").substring(0, 3);
 
 export const getWeekdayENG = (date) =>
   dayjs(date).format("dddd").substring(0, 3);

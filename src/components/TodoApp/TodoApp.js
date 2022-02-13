@@ -1,37 +1,53 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 
 // COMPONENTS
 import TodoForm from "./TodoForm/TodoForm";
-import Settings from "./TodoSettings/Settings";
 import TodoList from "./TodoList/TodoList";
-import TodoSort from "./TodoSort/TodoSort";
-import WeatherApp from "../WeatherApp/WeatherApp";
+import TodoOrder from "./TodoOrder/TodoOrder";
 
 // CONTEXT
-import { AppContext } from "../Context/AppContext";
+import { AppContext } from "../../context/AppContext";
 
 // SCSS
 import "./TodoApp.scss";
 
 const emptyStringRegex = /^\s*$/;
 
+const filterTodos = (status, todos) => {
+  switch (status) {
+    case "complete":
+      return todos.filter((todo) => todo.isDone);
+    case "uncomplete":
+      return todos.filter((todo) => !todo.isDone);
+    default:
+      return todos;
+  }
+};
+
+const sortTodos = (status, todos) => {
+  switch (status) {
+    case "latest":
+      return [...todos].sort(function (a, b) {
+        return b.data - a.data;
+      });
+    case "oldest":
+      return [...todos].sort(function (a, b) {
+        return a.data - b.data;
+      });
+    case "complete":
+      return [...todos].sort((a, b) => (b.isDone ? 1 : -1));
+    default:
+      return todos;
+  }
+};
+
 const TodoApp = () => {
   // HOOKS
   const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState("all");
-  const [filteredTodos, setFilteredTodos] = useState([]);
-  const { pinkTheme, theme, english, language } = useContext(AppContext);
+  const [sortState, setSortState] = useState("latest");
+  const [filterState, setFilterState] = useState("all");
 
-  // USE EFFECT
-  useEffect(() => {
-    filterHandler();
-  }, [todos, status]);
-
-  useEffect(() => {
-    pinkTheme
-      ? (document.body.style.backgroundColor = "rgb(209, 103, 160)")
-      : (document.body.style.backgroundColor = "rgb(47, 127, 192)");
-  }, [pinkTheme]);
+  const { theme, language } = useContext(AppContext);
 
   // FUNCTIONS
   const addTodo = (todo) => {
@@ -43,12 +59,11 @@ const TodoApp = () => {
         Czy przypadkiem nie za dużo tych zadań na raz? :)
         Najpierw skończ poprzednie zadania i zrób miejsce dla nowych!`);
     }
-    const newTodos = [todo, ...todos];
-    setTodos(newTodos);
+    setTodos([todo, ...todos]);
   };
 
   const completeTodo = (id) => {
-    let updatedTodos = todos.map((todo) => {
+    const updatedTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.isDone = !todo.isDone;
       }
@@ -81,63 +96,46 @@ const TodoApp = () => {
     );
   };
 
-  const filterHandler = () => {
-    switch (status) {
-      case "complete":
-        const completed = todos.filter((todo) => todo.isDone);
-        setFilteredTodos(completed);
-        break;
-      case "uncomplete":
-        const uncompleted = todos.filter((todo) => !todo.isDone);
-        setFilteredTodos(uncompleted);
-        break;
-      case "latest":
-        const latest = [...todos].sort(function (a, b) {
-          return b.data - a.data;
-        });
-        setFilteredTodos(latest);
-        break;
-      case "oldest":
-        const oldest = [...todos].sort(function (a, b) {
-          return a.data - b.data;
-        });
-        setFilteredTodos(oldest);
-        break;
-      default:
-        setFilteredTodos(todos);
-        break;
-    }
+  const handleSortChange = (e) => {
+    setSortState(e.target.value);
   };
 
-  // OTHERS
-  const titleText = english ? language.title.eng : language.title.pol;
-  const bgStyle = pinkTheme ? { background: theme.bgColor } : null;
-  const imgStyle = pinkTheme ? { backgroundImage: theme.bgImg } : null;
+  const handleFilterChange = (e) => {
+    setFilterState(e.target.value);
+  };
+
+  const displayedTodos = sortTodos(sortState, filterTodos(filterState, todos));
 
   return (
     <>
-      <div className="container-todo" style={bgStyle}>
-        <div className="todo-app" style={imgStyle}>
-          <div className="settings-panel">
-            <Settings />
-            <h1>{titleText}</h1>
-          </div>
-          <WeatherApp />
-          <div className="form-panel">
-            <TodoForm onSubmit={addTodo} />
-            <TodoSort todos={todos} setStatus={setStatus} />
-          </div>
-          <div
-            className={`todo-container ${pinkTheme ? "pink-scrollbar" : ""}`}
-          >
-            <TodoList
-              filteredTodos={filteredTodos}
-              completeTodo={completeTodo}
-              removeTodo={removeTodo}
-              editTodo={editTodo}
-            />
-          </div>
+      <div className="form-panel">
+        <TodoForm onSubmit={addTodo} />
+        <div className="sort-panel">
+          <TodoOrder
+            sortText={"Sort"}
+            value={sortState}
+            onChange={handleSortChange}
+            options={language.sortOptions}
+          />
+
+          <TodoOrder
+            sortText={"Filter"}
+            value={filterState}
+            onChange={handleFilterChange}
+            options={language.filterOptions}
+          />
         </div>
+      </div>
+
+      <div
+        className={`todo-container ${theme === "pink" ? "pink-scrollbar" : ""}`}
+      >
+        <TodoList
+          filteredTodos={displayedTodos}
+          completeTodo={completeTodo}
+          removeTodo={removeTodo}
+          editTodo={editTodo}
+        />
       </div>
     </>
   );

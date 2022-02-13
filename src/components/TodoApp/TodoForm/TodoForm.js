@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
-import { AppContext } from "../../Context/AppContext";
+import { AppContext } from "../../../context/AppContext";
 // import { BrowserView } from "react-device-detect";
 import { FaPlus } from "react-icons/fa";
 import "./TodoForm.scss";
@@ -9,7 +9,7 @@ const TodoForm = (props) => {
   const inputRef = useRef(null);
   const testMoblileDetect = false;
 
-  const { pinkTheme, english, language } = useContext(AppContext);
+  const { theme, language } = useContext(AppContext);
 
   useEffect(() => {
     if (
@@ -36,34 +36,32 @@ const TodoForm = (props) => {
     setInput("");
   };
 
-  // OTHERS
-  const button = `todo-button ${pinkTheme ? "pink" : ""}`;
-  const addInputText = english ? language.input[0] : "Dodaj zadanie";
-  const updateInputText = english ? language.input[1] : "Nowa treść zadania";
-  const updateButtonText = english ? language.input[2] : "Zmień";
-
   return (
     <form onSubmit={handleAddTodo} className="todo-form">
       {props.edit ? (
         <>
           <input
             type="text"
-            placeholder={updateInputText}
+            placeholder={language.updateInputText}
             maxLength="90"
             value={input}
             onChange={handleInput}
             name="text"
             className="todo-input"
-            // ref={inputRef}
             ref={testMoblileDetect ? inputRef : null}
           />
-          <button className={`${button} update`}>{updateButtonText}</button>
+          <button
+            className={`todo-button update`}
+            style={{ background: `${theme.bgButton}` }}
+          >
+            {language.updateButtonText}
+          </button>
         </>
       ) : (
         <>
           <input
             type="text"
-            placeholder={addInputText}
+            placeholder={language.addInputText}
             maxLength="90"
             value={input}
             onChange={handleInput}
@@ -71,7 +69,10 @@ const TodoForm = (props) => {
             className="todo-input"
             ref={inputRef}
           />
-          <button className={button}>
+          <button
+            className="todo-button"
+            style={{ background: `${theme.bgButton}` }}
+          >
             <FaPlus />
           </button>
         </>

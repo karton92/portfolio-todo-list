@@ -1,13 +1,13 @@
 import React, { useState, useContext } from "react";
 import TodoForm from "../TodoForm/TodoForm";
-import { AppContext } from "../../Context/AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { RiCloseCircleLine, RiCheckboxCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
 import "./TodoList.scss";
 import ReadMoreReact from "read-more-react";
 
-const Todo = ({ filteredTodos, completeTodo, removeTodo, editTodo }) => {
-  const { english } = useContext(AppContext);
+const TodoList = ({ filteredTodos, completeTodo, removeTodo, editTodo }) => {
+  const { language } = useContext(AppContext);
   const minLettersLength = 23;
   const idealLettersLength = 30;
   const maxLettersLength = 90;
@@ -42,7 +42,7 @@ const Todo = ({ filteredTodos, completeTodo, removeTodo, editTodo }) => {
         min={minLettersLength}
         ideal={idealLettersLength}
         max={maxLettersLength}
-        readMoreText={english ? "Read more..." : "Pokaż więcej..."}
+        readMoreText={language.readMoreText}
       />
 
       <div className="icons">
@@ -63,4 +63,4 @@ const Todo = ({ filteredTodos, completeTodo, removeTodo, editTodo }) => {
   ));
 };
 
-export default Todo;
+export default TodoList;

@@ -4,7 +4,7 @@ import {
   getCurrentDayForecast,
   currentDayForecastDetails,
   getUpcomingDaysForecast,
-} from "../../utils/functions";
+} from "../../../utils/functions";
 
 const BASE_URL = "https://www.metaweather.com/api/location";
 const CROSS_DOMAIN = "https://the-ultimate-api-challenge.herokuapp.com";
