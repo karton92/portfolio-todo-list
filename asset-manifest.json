@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-todo-list/static/css/main.70ac9df1.chunk.css",
+    "main.css": "/portfolio-todo-list/static/css/main.d7986686.chunk.css",
     "main.js": "/portfolio-todo-list/static/js/main.8c43b18c.chunk.js",
     "main.js.map": "/portfolio-todo-list/static/js/main.8c43b18c.chunk.js.map",
     "runtime-main.js": "/portfolio-todo-list/static/js/runtime-main.c3cba364.js",
@@ -8,7 +8,7 @@
     "static/js/2.44a2eb89.chunk.js": "/portfolio-todo-list/static/js/2.44a2eb89.chunk.js",
     "static/js/2.44a2eb89.chunk.js.map": "/portfolio-todo-list/static/js/2.44a2eb89.chunk.js.map",
     "index.html": "/portfolio-todo-list/index.html",
-    "static/css/main.70ac9df1.chunk.css.map": "/portfolio-todo-list/static/css/main.70ac9df1.chunk.css.map",
+    "static/css/main.d7986686.chunk.css.map": "/portfolio-todo-list/static/css/main.d7986686.chunk.css.map",
     "static/js/2.44a2eb89.chunk.js.LICENSE.txt": "/portfolio-todo-list/static/js/2.44a2eb89.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/portfolio-todo-list/static/media/bgPink.a958e56a.jpg",
     "static/media/CurrentDay.scss": "/portfolio-todo-list/static/media/mobile.48fd0d4a.jpg",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.c3cba364.js",
     "static/js/2.44a2eb89.chunk.js",
-    "static/css/main.70ac9df1.chunk.css",
+    "static/css/main.d7986686.chunk.css",
     "static/js/main.8c43b18c.chunk.js"
   ]
 }
