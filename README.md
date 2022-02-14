@@ -12,8 +12,9 @@ Also I'm use here:<br>
 1. React<br>
 2. Javascript<br>
 3. SCSS<br>
-4. Context API<br>
-5. Hooks<br>
-6. Axios<br>
-7. Day.js<br>
-8. I'm working with RWD & optimization.<br>
+4. RWD<br>
+5. Context API<br>
+6. Hooks<br>
+7. Axios<br>
+8. Day.js<br>
+9. Optimization Care.<br>
